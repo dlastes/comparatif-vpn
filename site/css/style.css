@@ -184,6 +184,12 @@ table.comparatif .audit-detail { color: var(--texte-attenue); }
 .guide-corps p { color: var(--texte-attenue); }
 .guide-corps ul, .guide-corps ol { color: var(--texte-attenue); }
 
+/* FAQ */
+.faq-item { border-bottom: 1px solid var(--bordure); padding: 20px 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3 { margin: 0 0 8px; font-size: 1.02rem; color: var(--texte); }
+.faq-item p { margin: 0; color: var(--texte-attenue); font-size: 0.92rem; }
+
 /* Fil d'Ariane */
 .fil-ariane { font-size: 0.82rem; color: var(--texte-tres-attenue); margin-bottom: 18px; }
 .fil-ariane a { color: var(--texte-attenue); }

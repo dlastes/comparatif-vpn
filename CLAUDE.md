@@ -188,6 +188,34 @@ Windscribe et PrivadoVPN sont les deux seuls sans audit no-logs independant). Ve
 via `generer_avis.py`, un extrait affiche visuellement correct sur `/avis/pia.html`
 (capture Playwright), 280 liens internes toujours intacts apres regeneration.
 
+## Accueil enrichi : selections etendues, FAQ, 4e guide (2026-08-07, meme session)
+
+Retour du mainteneur : le site restait "assez vide" compare aux vrais comparateurs VPN
+(top10vpn.com, security.org, tomsguide.com...) — recherche rapide confirmant leur pattern
+commun : selections par cas d'usage, FAQ, guides pedagogiques en plus du tableau brut. Ajoute
+en respectant la meme discipline de sourcing (rien de nouveau invente, tout derive de
+`vpns.json` deja sourced) :
+
+- **2 selections editoriales de plus** (`site/index.html`) : "Le plus grand reseau"
+  (CyberGhost, 11 500 serveurs/100 pays — deja dans `vpns.json`) et un "Point de vigilance"
+  qui flague explicitement Windscribe et PrivadoVPN comme les deux seuls fournisseurs sans
+  audit no-logs independant — un signal negatif assume plutot que masque, coherent avec la
+  regle "jamais de donnee inventee, jamais de manque cache non plus".
+- **Section FAQ sur l'accueil** (4 questions : legalite du VPN en France, ce qu'un audit
+  no-logs prouve reellement, poids de la juridiction, comment choisir) — contenu general de
+  litteratie VPN, chaque reponse renvoie vers le guide correspondant pour approfondir plutot
+  que de dupliquer le contenu.
+- **4e guide** : `site/guides/vpn-gratuit.html` ("VPN gratuit : bonne ou mauvaise idee ?"),
+  contraste Proton VPN (audit annuel, modele freemium adosse a un ecosysteme payant) vs
+  PrivadoVPN (seul fournisseur sans aucun audit en six ans) — les deux seuls a offrir un tier
+  gratuit dans ce comparatif. Ajoute a `web/build/generer_sitemap.py` (liste figee, a completer
+  manuellement a chaque nouveau guide — pas de decouverte automatique du dossier `guides/`).
+- `.faq-item` ajoute a `style.css` (variante sombre du meme pattern que MesAides).
+- `ASSET_VERSION` 2 -> 3 (`?v=2` -> `?v=3` sur toutes les pages, y compris regenerees).
+
+Verifie : 301 liens internes (0 casse), capture Playwright des nouvelles sections (selections
+etendues + FAQ), 0 erreur console.
+
 ## Publicite AdSense (2026-08-07)
 
 `site/ads.txt` ajoute avec le meme identifiant editeur que le reste de la famille de sites

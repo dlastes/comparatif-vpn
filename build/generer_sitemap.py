@@ -20,6 +20,7 @@ PAGES_FIXES = [
     "/guides/juridiction-vpn.html",
     "/guides/comprendre-audit-no-logs.html",
     "/guides/paiement-anonyme-vpn.html",
+    "/guides/vpn-gratuit.html",
 ]
 
 
