@@ -1,0 +1,183 @@
+{
+  "genere_le": "2026-08-07",
+  "note_methodologie": "Donnees agregees depuis les sites officiels de chaque fournisseur et des sources tierces citees par fiche. Aucun test de vitesse ou de fuite DNS n'a ete realise par ce site (pas de materiel dedie) — voir methodologie.html. Un champ absent (null) signifie une donnee non trouvee ou non publiee par la source, jamais une valeur devinee.",
+  "vpns": [
+    {
+      "id": "nordvpn",
+      "nom": "NordVPN",
+      "prix_mensuel_engagement_eur": 3.09,
+      "prix_mensuel_sans_engagement_eur": null,
+      "devise_source": "EUR",
+      "juridiction": "Panama",
+      "juridiction_note": "Aucune loi de conservation des donnees obligatoire au Panama.",
+      "audit_no_logs": "Deloitte — 6e audit annuel consecutif, publie en fevrier 2026",
+      "nb_serveurs": null,
+      "nb_pays": null,
+      "paiement_anonyme": null,
+      "sources": [
+        {"label": "Security.org — NordVPN Pricing 2026", "url": "https://www.security.org/vpn/nordvpn/"},
+        {"label": "Tom's Guide — NordVPN no-logs audit", "url": "https://www.tomsguide.com/computing/vpns/nordvpn-will-never-store-your-data-and-it-can-prove-it"}
+      ]
+    },
+    {
+      "id": "expressvpn",
+      "nom": "ExpressVPN",
+      "prix_mensuel_engagement_usd": 2.79,
+      "prix_mensuel_sans_engagement_usd": 12.99,
+      "devise_source": "USD",
+      "juridiction": "Iles Vierges britanniques",
+      "juridiction_note": "Hors alliances de renseignement 5/9/14 Eyes, pas de loi de conservation des donnees.",
+      "audit_no_logs": "23 audits au total ; dernier par KPMG en 2025 (no-logs) ; PwC, Cure53 et F-Secure ont aussi audite apps, extensions et le protocole Lightway",
+      "nb_serveurs": 3000,
+      "nb_pays": 105,
+      "paiement_anonyme": null,
+      "sources": [
+        {"label": "Security.org — ExpressVPN Pricing 2026", "url": "https://www.security.org/vpn/expressvpn/"}
+      ]
+    },
+    {
+      "id": "surfshark",
+      "nom": "Surfshark",
+      "prix_mensuel_engagement_usd": 2.49,
+      "prix_mensuel_sans_engagement_usd": 15.45,
+      "devise_source": "USD",
+      "juridiction": "Pays-Bas",
+      "juridiction_note": "Membre de l'alliance de renseignement Nine Eyes.",
+      "audit_no_logs": "Deloitte — audits en 2023 et 2025",
+      "nb_serveurs": 4500,
+      "nb_pays": null,
+      "nb_emplacements": 100,
+      "paiement_anonyme": null,
+      "note_supplementaire": "IP temporairement conservee pendant la session active, supprimee dans les 15 minutes suivant la deconnexion (anti-abus). Parc de serveurs 100% RAM-only depuis 2020.",
+      "sources": [
+        {"label": "Security.org — Surfshark Review 2026", "url": "https://www.security.org/vpn/surfshark/review/"},
+        {"label": "TechRadar — audit Surfshark", "url": "https://www.techradar.com/vpn/vpn-privacy-security/surfshark-reaffirms-its-commitment-to-user-privacy-in-independent-audit"}
+      ]
+    },
+    {
+      "id": "protonvpn",
+      "nom": "Proton VPN",
+      "prix_mensuel_engagement_usd": 2.99,
+      "prix_mensuel_sans_engagement_usd": 9.99,
+      "devise_source": "USD",
+      "offre_gratuite": true,
+      "juridiction": "Suisse",
+      "juridiction_note": "Aucune obligation de conservation des donnees sous le droit suisse actuel. En 2019, Proton n'a pas pu transmettre de logs a la justice car ils n'existaient pas.",
+      "audit_no_logs": "Securitum — 5 audits annuels consecutifs jusqu'en 2026",
+      "nb_serveurs": null,
+      "nb_pays": null,
+      "paiement_anonyme": null,
+      "note_supplementaire": "N'utilise pas de serveurs RAM-only (a la difference de plusieurs concurrents de ce comparatif).",
+      "sources": [
+        {"label": "Proton VPN — 5th annual no-logs audit", "url": "https://protonvpn.com/blog/no-logs-audit"}
+      ]
+    },
+    {
+      "id": "mullvad",
+      "nom": "Mullvad",
+      "prix_mensuel_engagement_eur": 5,
+      "prix_mensuel_sans_engagement_eur": 5,
+      "devise_source": "EUR",
+      "juridiction": "Suede",
+      "juridiction_note": "Hors Five Eyes, membre de l'alliance elargie 14 Eyes. Une perquisition de la police suedoise en 2023 n'a permis de saisir aucune donnee client.",
+      "audit_no_logs": "10+ audits independants (Cure53, Assured AB)",
+      "nb_serveurs": 700,
+      "nb_pays": 50,
+      "paiement_anonyme": "Carte, PayPal, virement, Bitcoin, Bitcoin Lightning, Monero, especes envoyees par courrier",
+      "note_supplementaire": "Pas de compte email requis : numero de compte genere automatiquement. Prix fixe unique, sans palier ni hausse au renouvellement.",
+      "sources": [
+        {"label": "Security.org — Mullvad Review 2026", "url": "https://www.security.org/vpn/mullvad/"},
+        {"label": "VPN.com — Mullvad Security", "url": "https://www.vpn.com/vpn/mullvad/security/"}
+      ]
+    },
+    {
+      "id": "cyberghost",
+      "nom": "CyberGhost",
+      "prix_mensuel_engagement_usd": 2.03,
+      "prix_mensuel_sans_engagement_usd": null,
+      "devise_source": "USD",
+      "juridiction": "Roumanie",
+      "juridiction_note": "Hors alliances 5/9/14 Eyes, pas de loi de conservation des donnees obligatoire.",
+      "audit_no_logs": "Deloitte Romania — audite 3 fois, dernier au T4 2025",
+      "nb_serveurs": 11500,
+      "nb_pays": 100,
+      "paiement_anonyme": null,
+      "note_supplementaire": "Serveurs \"NoSpy\" detenus en propre, situes en Roumanie.",
+      "sources": [
+        {"label": "Security.org — CyberGhost Pricing 2026", "url": "https://www.security.org/vpn/cyberghost/"},
+        {"label": "VPN.com — CyberGhost Security", "url": "https://www.vpn.com/vpn/cyberghost/security/"}
+      ]
+    },
+    {
+      "id": "pia",
+      "nom": "Private Internet Access (PIA)",
+      "prix_mensuel_engagement_usd": 1.33,
+      "prix_mensuel_sans_engagement_usd": 4.70,
+      "devise_source": "USD",
+      "juridiction": "Etats-Unis",
+      "juridiction_note": "Politique no-logs testee reellement lors d'une assignation du FBI en 2016 (rien a transmettre).",
+      "audit_no_logs": "Deloitte — audite 3 fois (2022, 2024, 2025)",
+      "nb_serveurs": null,
+      "nb_pays": null,
+      "nb_emplacements": 91,
+      "paiement_anonyme": null,
+      "note_supplementaire": "Infrastructure 100% RAM-only. Presence dans les 50 etats americains.",
+      "sources": [
+        {"label": "Gizmodo — PIA Pricing 2026", "url": "https://gizmodo.com/best-vpn/private-internet-access/pricing"}
+      ]
+    },
+    {
+      "id": "ivpn",
+      "nom": "IVPN",
+      "prix_mensuel_engagement_eur": 6,
+      "prix_mensuel_sans_engagement_eur": 6,
+      "devise_source": "EUR",
+      "juridiction": "Gibraltar",
+      "juridiction_note": "Base legale en Suisse. Hors grandes alliances de surveillance. Rapport de transparence publie sur les demandes des autorites.",
+      "audit_no_logs": "Cure53 — audit annuel, 8e edition prevue en 2026",
+      "nb_serveurs": null,
+      "nb_pays": null,
+      "paiement_anonyme": "Especes, cryptomonnaies ; inscription possible sans adresse email",
+      "note_supplementaire": "Serveurs RAM-only. Offre Pro (10 EUR/mois) avec multi-hop et port forwarding.",
+      "sources": [
+        {"label": "European Purpose — IVPN Review 2026", "url": "https://europeanpurpose.com/tool/ivpn"},
+        {"label": "vpnMentor — IVPN Review 2026", "url": "https://www.vpnmentor.com/reviews/ivpn/"}
+      ]
+    },
+    {
+      "id": "windscribe",
+      "nom": "Windscribe",
+      "prix_mensuel_engagement_usd": 3,
+      "prix_mensuel_sans_engagement_usd": null,
+      "devise_source": "USD",
+      "juridiction": "Canada",
+      "juridiction_note": "Membre de l'alliance Five Eyes, mais aucune obligation legale canadienne de conserver des logs. Deux serveurs saisis par les autorites ukrainiennes n'ont livre aucune donnee utilisateur.",
+      "audit_no_logs": "Aucun audit independant dedie a la politique no-logs publie a ce jour (seulement des audits d'applications par Leviathan Security en 2021 et 2022)",
+      "nb_serveurs": null,
+      "nb_pays": null,
+      "paiement_anonyme": null,
+      "note_supplementaire": "Tarification atypique : 1 USD/mois par pays choisi (minimum 3 USD/mois) plutot qu'un tarif unique donnant acces a tout le reseau.",
+      "sources": [
+        {"label": "Security.org — Windscribe Review 2026", "url": "https://www.security.org/vpn/windscribe/review/"}
+      ]
+    },
+    {
+      "id": "privadovpn",
+      "nom": "PrivadoVPN",
+      "prix_mensuel_engagement_usd": 1.11,
+      "prix_mensuel_sans_engagement_usd": 1.99,
+      "devise_source": "USD",
+      "offre_gratuite": true,
+      "juridiction": "Islande",
+      "juridiction_note": "A quitte la Suisse en 2025 suite aux reformes de surveillance suisses. L'Islande est hors UE/5-9-14 Eyes et classe les VPN comme fournisseurs de services applicatifs, pas comme telecoms.",
+      "audit_no_logs": "Aucun audit independant publie en six ans d'activite — les engagements reposent sur les seules declarations de l'entreprise",
+      "nb_serveurs": 500,
+      "nb_pays": 50,
+      "paiement_anonyme": null,
+      "sources": [
+        {"label": "VPN.com — PrivadoVPN Review", "url": "https://www.vpn.com/vpn/privadovpn/"},
+        {"label": "FindCheapVPNs — Is PrivadoVPN Safe?", "url": "https://findcheapvpns.com/guides/is-privadovpn-safe/"}
+      ]
+    }
+  ]
+}

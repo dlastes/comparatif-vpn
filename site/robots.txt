@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://comparatif-vpn.pages.dev/sitemap.xml

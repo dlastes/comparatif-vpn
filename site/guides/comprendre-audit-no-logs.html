@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comprendre un audit no-logs VPN | ComparatifVPN</title>
+<meta name="description" content="Ce qu'un cabinet comme Deloitte, KPMG ou Cure53 verifie reellement dans un audit no-logs, et ce qu'un audit ne peut pas prouver.">
+<link rel="canonical" href="https://comparatif-vpn.pages.dev/guides/comprendre-audit-no-logs.html">
+<link rel="stylesheet" href="/css/style.css?v=1">
+</head>
+<body>
+
+<header class="entete">
+  <div class="conteneur entete-barre">
+    <a href="/" class="logo">comparatif<span class="point">.</span>vpn</a>
+    <nav class="nav-principale">
+      <a href="/comparatif.html">Comparatif</a>
+      <a href="/guides/" class="actif">Guides</a>
+      <a href="/methodologie.html">Methodologie</a>
+    </nav>
+  </div>
+</header>
+
+<main class="conteneur-etroit">
+  <p class="fil-ariane"><a href="/">Accueil</a> / <a href="/guides/">Guides</a> / Audits no-logs</p>
+  <h1>Comprendre un audit no-logs</h1>
+
+  <div class="guide-corps">
+    <p>Un VPN "no-logs" affirme ne conserver aucune trace de votre activite (sites visites, adresses IP, horodatage des connexions). Un audit independant est la seule facon de verifier cette promesse sans avoir a faire confiance a la seule parole du fournisseur.</p>
+
+    <h2>Ce qu'un audit verifie concretement</h2>
+    <p>Un cabinet comme Deloitte, KPMG, PwC ou une entreprise de securite comme Cure53 ou Securitum inspecte generalement : la configuration reelle des serveurs de production, le code source des composants qui geraient historiquement des journaux, les politiques internes de retention de donnees, et parfois interroge directement l'infrastructure en conditions reelles plutot que sur une simple declaration ecrite.</p>
+
+    <h2>Ce qu'un audit ne peut pas garantir</h2>
+    <p>Un audit est une photographie a un instant donne : il certifie l'etat observe au moment du controle, pas un engagement perpetuel. C'est pourquoi la frequence compte — un fournisseur audite chaque annee (comme NordVPN, 6e audit consecutif en 2026, ou IVPN, 8e edition prevue en 2026) offre une garantie plus recente qu'un fournisseur audite une seule fois il y a plusieurs annees. Un audit ne peut pas non plus prouver l'absence totale de journaux ailleurs dans la chaine (fournisseur d'hebergement, sous-traitant) s'il n'est pas explicitement dans le perimetre verifie.</p>
+
+    <h2>Le cas des serveurs RAM-only</h2>
+    <p>Plusieurs fournisseurs de ce comparatif (Surfshark, CyberGhost, PIA, IVPN) font tourner leurs serveurs entierement en memoire vive plutot que sur un disque dur — toute donnee est perdue a chaque redemarrage, ce qui rend une conservation de journaux a long terme structurellement plus difficile, independamment des intentions declarees. C'est un signal technique complementaire a un audit, pas un remplacement.</p>
+
+    <h2>Un fournisseur sans audit n'est pas automatiquement a eviter</h2>
+    <p>Windscribe et PrivadoVPN, dans ce comparatif, n'ont pas d'audit no-logs independant publie a ce jour — cela ne signifie pas necessairement une mauvaise pratique, mais que l'engagement repose sur la seule declaration de l'entreprise plutot que sur une verification tierce. Voir leurs fiches individuelles pour le detail exact de ce qui existe (ou non) pour chacun.</p>
+
+    <p>Voir le detail de chaque audit dans le <a href="/comparatif.html">tableau comparatif</a>.</p>
+  </div>
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <p>ComparatifVPN — comparateur independant.</p>
+    <div class="pied-liens">
+      <a href="/methodologie.html">Methodologie</a>
+      <a href="/comparatif.html">Comparatif</a>
+      <a href="/guides/">Guides</a>
+      <a href="/confidentialite.html">Confidentialite</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
