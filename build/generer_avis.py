@@ -141,6 +141,11 @@ def rendre_fiche(vpn):
   </div>
 
   <section>
+    <h2>Notre avis sur {nom}</h2>
+    <p>{vpn.get('notre_avis', "Avis editorial non redige pour ce fournisseur.")}</p>
+  </section>
+
+  <section>
     <h2>Juridiction</h2>
     <p>{vpn.get('juridiction_note', non_renseigne(False))}</p>
   </section>

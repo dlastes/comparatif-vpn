@@ -173,6 +173,21 @@ teste avec la colonne prix) ; rendu de `/avis/mullvad.html` avec logo + lien off
 **Toujours non verifie** : rendu reel sur un vrai navigateur/appareil mobile (Playwright
 headless seulement, extension Chrome indisponible dans cet environnement).
 
+## Section "Notre avis" par fiche (2026-08-07, meme session — demande SEO explicite)
+
+Chaque page `/avis/<id>.html` a maintenant un paragraphe editorial substantiel ("Notre avis
+sur <nom>", nouveau champ `notre_avis` dans `vpns.json`, rendu par `generer_avis.py` juste
+apres les statistiques cle, avant la section Juridiction) — objectif explicite du mainteneur :
+du contenu long et unique par page pour le referencement, la ou le tableau seul ne fournit que
+des donnees tabulaires. **Discipline "jamais de donnee inventee" respectee** : chaque avis ne
+fait que synthetiser des faits DEJA presents et sources ailleurs dans la meme fiche
+(audit_no_logs, juridiction, note_supplementaire, paiement_anonyme, prix) — aucun nouveau fait
+numerique n'a ete introduit, seulement une mise en perspective editoriale (ex : Proton VPN est
+le seul a ne pas etre RAM-only, PIA est aux Etats-Unis mais a un vrai precedent FBI 2016,
+Windscribe et PrivadoVPN sont les deux seuls sans audit no-logs independant). Verifie : rendu
+via `generer_avis.py`, un extrait affiche visuellement correct sur `/avis/pia.html`
+(capture Playwright), 280 liens internes toujours intacts apres regeneration.
+
 ## Publicite AdSense (2026-08-07)
 
 `site/ads.txt` ajoute avec le meme identifiant editeur que le reste de la famille de sites

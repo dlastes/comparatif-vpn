@@ -25,7 +25,8 @@
           "label": "Tom's Guide — NordVPN no-logs audit",
           "url": "https://www.tomsguide.com/computing/vpns/nordvpn-will-never-store-your-data-and-it-can-prove-it"
         }
-      ]
+      ],
+      "notre_avis": "NordVPN se distingue surtout par la regularite de son audit no-logs : Deloitte l'a verifie six annees consecutives, ce qui en fait l'historique le plus stable de ce comparatif plutot que le plus spectaculaire. Le Panama comme juridiction reste un argument commercial recurrent chez ce fournisseur, mais aucune donnee de ce comparatif ne permet de le distinguer nettement des autres juridictions hors Five Eyes presentes ici. A prix egal ou inferieur a ses concurrents directs, c'est un choix raisonnable pour qui veut un audit recent sans avoir a comparer des dizaines de rapports."
     },
     {
       "id": "expressvpn",
@@ -46,7 +47,8 @@
           "label": "Security.org — ExpressVPN Pricing 2026",
           "url": "https://www.security.org/vpn/expressvpn/"
         }
-      ]
+      ],
+      "notre_avis": "ExpressVPN cumule le plus grand nombre d'audits independants de ce comparatif : 23 au total, repartis entre plusieurs cabinets (KPMG sur le no-logs, PwC, Cure53 et F-Secure sur les applications et le protocole Lightway). C'est la verification la plus large en surface, pas seulement la plus recente. En contrepartie, aucune methode de paiement anonyme n'est documentee pour ce fournisseur, et le prix avec engagement (2,79 $/mois) grimpe fortement sans engagement (12,99 $/mois) -- a comparer avec les offres a prix fixe comme Mullvad si l'objectif est de na pas subir de hausse au renouvellement."
     },
     {
       "id": "surfshark",
@@ -73,7 +75,8 @@
           "label": "TechRadar — audit Surfshark",
           "url": "https://www.techradar.com/vpn/vpn-privacy-security/surfshark-reaffirms-its-commitment-to-user-privacy-in-independent-audit"
         }
-      ]
+      ],
+      "notre_avis": "Surfshark combine un prix bas et un parc de serveurs consequent (4500 serveurs, infrastructure 100% RAM-only depuis 2020), avec deux audits Deloitte en 2023 et 2025. Le point a peser serieusement est la juridiction : les Pays-Bas font partie de l'alliance de renseignement Nine Eyes, contrairement a la plupart des autres fournisseurs de ce comparatif. Surfshark conserve aussi temporairement une adresse IP pendant la session active (supprimee dans les 15 minutes suivant la deconnexion, a des fins anti-abus) -- un detail rarement mis en avant mais documente par le fournisseur lui-meme."
     },
     {
       "id": "protonvpn",
@@ -96,7 +99,8 @@
           "label": "Proton VPN — 5th annual no-logs audit",
           "url": "https://protonvpn.com/blog/no-logs-audit"
         }
-      ]
+      ],
+      "notre_avis": "Proton VPN a ete verifie cinq annees consecutives par Securitum, et son cas d'usage le plus concret reste juridique : en 2019, l'entreprise n'a pas pu transmettre de logs a la justice suisse car ils n'existaient tout simplement pas, un precedent reel plutot qu'une promesse marketing. A l'inverse de la plupart de ses concurrents de ce comparatif, Proton VPN n'utilise pas une infrastructure exclusivement RAM-only -- une difference d'architecture documentee par le fournisseur, a mettre en balance avec son offre gratuite, rare dans ce comparatif."
     },
     {
       "id": "mullvad",
@@ -122,7 +126,8 @@
           "label": "VPN.com — Mullvad Security",
           "url": "https://www.vpn.com/vpn/mullvad/security/"
         }
-      ]
+      ],
+      "notre_avis": "Mullvad est, avec IVPN, le fournisseur le plus anonyme de ce comparatif des l'inscription : aucun email requis, un numero de compte genere automatiquement, et un paiement possible en especes envoyees par courrier ou en Monero. Plus de dix audits independants (Cure53, Assured AB) et un prix fixe unique sans palier ni hausse au renouvellement completent le tableau. Le seul bemol factuel est la juridiction : la Suede appartient a l'alliance elargie 14 Eyes, meme si une perquisition reelle de la police suedoise en 2023 n'a permis de saisir aucune donnee client."
     },
     {
       "id": "cyberghost",
@@ -148,7 +153,8 @@
           "label": "VPN.com — CyberGhost Security",
           "url": "https://www.vpn.com/vpn/cyberghost/security/"
         }
-      ]
+      ],
+      "notre_avis": "CyberGhost affiche le plus grand parc de serveurs de ce comparatif (11 500 serveurs dans 100 pays), avec des serveurs \"NoSpy\" detenus en propre en Roumanie et trois audits Deloitte Romania, le dernier au dernier trimestre 2025. La Roumanie, hors des alliances de surveillance 5/9/14 Eyes et sans obligation de conservation des donnees, est un argument de juridiction credible. Aucune methode de paiement anonyme n'est en revanche documentee pour ce fournisseur, contrairement a Mullvad ou IVPN dans ce meme comparatif."
     },
     {
       "id": "pia",
@@ -171,7 +177,8 @@
           "label": "Gizmodo — PIA Pricing 2026",
           "url": "https://gizmodo.com/best-vpn/private-internet-access/pricing"
         }
-      ]
+      ],
+      "notre_avis": "Private Internet Access affiche le prix le plus bas de ce comparatif (1,33 $/mois avec engagement) et le seul test grandeur nature documente ici avec autant de precision : une assignation du FBI en 2016 a laquelle l'entreprise n'avait litteralement rien a transmettre. Cela dit, PIA est domicilie aux Etats-Unis, le pays le plus surveille des juridictions presentes dans ce comparatif (membre du noyau Five Eyes) -- un point a ne pas ignorer meme si le seul cas reel connu a joue en sa faveur. Infrastructure RAM-only et presence dans les 50 etats americains completent le profil."
     },
     {
       "id": "ivpn",
@@ -197,7 +204,8 @@
           "label": "vpnMentor — IVPN Review 2026",
           "url": "https://www.vpnmentor.com/reviews/ivpn/"
         }
-      ]
+      ],
+      "notre_avis": "IVPN partage avec Mullvad le niveau d'anonymat le plus pousse de ce comparatif : inscription possible sans adresse email, paiement en especes ou en cryptomonnaies, et un rapport de transparence publie sur les demandes des autorites. L'audit Cure53 en est a sa huitieme edition annuelle prevue en 2026, une cadence reguliere. Ce niveau de confidentialite a un cout : IVPN est l'un des fournisseurs les plus chers de ce comparatif (6 €/mois), sans palier degressif visible dans les donnees recueillies ici -- un choix qui s'adresse davantage a qui priorise l'anonymat qu'au meilleur prix."
     },
     {
       "id": "windscribe",
@@ -219,7 +227,8 @@
           "label": "Security.org — Windscribe Review 2026",
           "url": "https://www.security.org/vpn/windscribe/review/"
         }
-      ]
+      ],
+      "notre_avis": "Windscribe est l'un des deux fournisseurs de ce comparatif sans audit no-logs independant publie : seules des applications ont ete auditees par Leviathan Security, en 2021 et 2022, ce qui ne verifie pas la politique de conservation des donnees elle-meme. Un point positif documente existe malgre tout : deux serveurs saisis par les autorites ukrainiennes n'ont livre aucune donnee utilisateur. Sa tarification est aussi atypique dans ce comparatif : 1 $/mois par pays choisi individuellement plutot qu'un tarif unique donnant acces a tout le reseau, a bien comprendre avant de souscrire."
     },
     {
       "id": "privadovpn",
@@ -245,7 +254,8 @@
           "label": "FindCheapVPNs — Is PrivadoVPN Safe?",
           "url": "https://findcheapvpns.com/guides/is-privadovpn-safe/"
         }
-      ]
+      ],
+      "notre_avis": "PrivadoVPN est le moins cher de ce comparatif (1,11 $/mois avec engagement) et propose une offre gratuite, mais c'est aussi le seul fournisseur sans aucun audit independant publie en six ans d'activite -- ses engagements de confidentialite reposent sur ses seules declarations. Le changement de juridiction en 2025, de la Suisse vers l'Islande suite aux reformes de surveillance suisses, est recent et documente par le fournisseur. L'Islande est hors UE et hors des alliances 5/9/14 Eyes, mais l'absence totale d'audit reste, dans ce comparatif, le plus grand ecart entre le prix et la verifiabilite reelle des promesses."
     }
   ]
 }
