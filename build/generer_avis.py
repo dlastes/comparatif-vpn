@@ -94,6 +94,7 @@ def rendre_fiche(vpn):
 <meta name="description" content="{nom} : prix reel, juridiction ({vpn['juridiction']}), audit no-logs et methodes de paiement. Fiche sourcee, mise a jour le 7 aout 2026.">
 <link rel="canonical" href="{SITE_URL}/avis/{vpn['id']}.html">
 <link rel="stylesheet" href="/css/style.css?v={ASSET_VERSION}">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4671241466590955" crossorigin="anonymous"></script>
 </head>
 <body>
 

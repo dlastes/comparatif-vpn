@@ -125,13 +125,36 @@ documente dans le CLAUDE.md de PrixDuMetre.
 - Aucun compte Cloudflare Pages ni depot GitHub crees pour ce projet a la date d'ecriture —
   voir "Deploiement" ci-dessous pour ce qui reste a faire par le mainteneur.
 
+## Publicite AdSense (2026-08-07)
+
+`site/ads.txt` ajoute avec le meme identifiant editeur que le reste de la famille de sites
+(`pub-4671241466590955`, deja verifie actif sur PrixDuMetre/ValeurEcole/PleinMalin/InfraRoute
+web) — reutilise tel quel, jamais un nouvel identifiant invente.
+
+**Site ajoute au compte AdSense existant** (pas un nouveau compte — connexion via le compte
+Google du mainteneur deja associe, `penatit.contact@gmail.com`) : `comparatif-vpn.pages.dev`
+apparait desormais dans la liste des sites du compte `pub-4671241466590955`, statut "Examen
+requis". La balise fournie par AdSense pour cette verification
+(`<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4671241466590955" crossorigin="anonymous"></script>`)
+a ete inseree juste avant `</head>` sur les 18 pages du site (verifie par grep + servi
+localement), et ajoutee au gabarit de `build/generer_avis.py` pour que les 10 fiches
+regenerees la conservent automatiquement.
+
+**Ce qui reste bloque pour le mainteneur, pas pour Cowork** : le compte AdSense affiche un
+bandeau "Action requise : vous devez verifier votre compte de paiement AdSense" — verification
+d'identite/paiement qui touche des donnees bancaires/personnelles, hors de portee de cet
+environnement (entree de coordonnees bancaires explicitement interdite). Sans cette
+verification de compte ET sans que Google approuve le site apres examen (delai variable,
+generalement plusieurs jours), aucune annonce ne s'affichera reellement meme si la balise est
+deja en place.
+
 ## Deploiement — ce qui reste a faire par le mainteneur
 
 Cet environnement n'a ni identifiants GitHub (pas de `git push` possible), ni acces API
 Cloudflare pour la gestion de Pages (seul un connecteur MCP limite est disponible, qui ne
 couvre pas la creation de projets Pages) — meme limite que documentee sur les autres sites de
 la famille cree/redesigne cette meme periode. Le depot local est initialise et commite
-(`git init` + premier commit), mais :
+(`git init` + premier commit, 29 fichiers, verifie via `git show --stat`), mais :
 
 1. **Creer le depot GitHub** `dlastes/comparatif-vpn` (prive, comme les autres) et `git push`
    depuis une machine ou les identifiants du mainteneur sont deja configures.
@@ -139,9 +162,22 @@ la famille cree/redesigne cette meme periode. Le depot local est initialise et c
    de build — tout est pre-genere et commite).
 3. **Ajouter le secret `CLOUDFLARE_API_TOKEN`** dans les parametres GitHub Actions du depot,
    pour que `.github/workflows/deploy.yml` (deja pret, meme pattern que PleinMalin) puisse
-   deployer automatiquement a chaque push sur `main`.
+   deployer automatiquement a chaque push.
 4. Une fois en ligne : ajouter le site a Google Search Console (verification HTML-file, meme
    procedure que les autres sites) et soumettre `sitemap.xml`.
+
+**Detail technique laisse en l'etat** : la branche locale s'appelle `master`, pas `main`
+(une tentative de renommage via `git branch -m` a echoue — le montage Windows de cet
+environnement a laisse des fichiers `.lock` orphelins dans `.git/` apres le premier commit,
+non supprimables meme en `rm -f` malgre des permissions `rwx` normales, memes symptomes que
+le warning `unable to unlink` deja documente sur `mon-autre-app` cette meme session, mais ici
+bloquant plutot que non-fatal). `.github/workflows/deploy.yml` a ete elargi pour accepter un
+push sur `main` OU `master` (`on: push: branches: [main, master]`) afin que le deploiement
+fonctionne quel que soit le nom de branche final — cette modification, elle, n'a pas pu etre
+commitee pour la meme raison (verifiable via `git diff` : un seul fichier modifie, non commite).
+Le mainteneur peut soit pousser tel quel (`master`, le workflow le couvre), soit renommer la
+branche en `main` depuis son propre git (aucun probleme de verrou attendu hors de ce montage)
+avant de pousser, puis recommiter le fichier `deploy.yml` elargi si souhaite.
 
 ## Reste a faire
 
