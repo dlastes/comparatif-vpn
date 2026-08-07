@@ -113,9 +113,13 @@ def rendre_fiche(vpn):
   <p class="fil-ariane"><a href="/">Accueil</a> / <a href="/comparatif.html">Comparatif</a> / {nom}</p>
 
   <div class="fiche-entete">
-    <h1>{nom}</h1>
+    <div class="fiche-titre">
+      <img src="{vpn['logo']}" alt="Logo {nom}" width="40" height="40" class="logo-vpn">
+      <h1>{nom}</h1>
+    </div>
     <div class="fiche-prix-badge">{fmt_prix(vpn)}</div>
   </div>
+  <p><a href="{vpn['site_officiel']}" rel="nofollow noopener sponsored" target="_blank" class="lien-officiel">Site officiel de {nom} &#8599;</a></p>
 
   <div class="fiche-grille">
     <div class="fiche-stat">

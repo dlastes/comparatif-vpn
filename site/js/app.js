@@ -29,7 +29,7 @@ function formaterAudit(vpn) {
   const nonAudite = /aucun audit/i.test(vpn.audit_no_logs);
   const classe = nonAudite ? "badge-non-audite" : "badge-audite";
   const libelle = nonAudite ? "Non audite" : "Audite";
-  return `<span class="badge ${classe}">${libelle}</span> <span style="color:var(--texte-attenue)">${vpn.audit_no_logs}</span>`;
+  return `<span class="badge ${classe}">${libelle}</span> <span class="audit-detail">${vpn.audit_no_logs}</span>`;
 }
 
 function formaterServeurs(vpn) {
@@ -60,12 +60,18 @@ function rendreTableau() {
 
   corps.innerHTML = lignes.map(v => `
     <tr>
-      <td class="nom-vpn"><a href="/avis/${v.id}.html">${v.nom}</a></td>
+      <td class="nom-vpn">
+        <a href="/avis/${v.id}.html" class="lien-fournisseur">
+          <img src="${v.logo}" alt="" width="28" height="28" class="logo-vpn" loading="lazy">
+          ${v.nom}
+        </a>
+      </td>
       <td class="prix">${formaterPrix(v)}</td>
       <td>${v.juridiction}</td>
       <td>${formaterAudit(v)}</td>
       <td>${formaterServeurs(v)}</td>
-      <td>${v.paiement_anonyme ? "Oui" : '<span class="non-renseigne">non communique</span>'}</td>
+      <td>${v.paiement_anonyme ? v.paiement_anonyme : '<span class="non-renseigne">non communique</span>'}</td>
+      <td><a href="${v.site_officiel}" rel="nofollow noopener sponsored" target="_blank" class="lien-officiel">Site officiel ↗</a></td>
     </tr>
   `).join("");
 }

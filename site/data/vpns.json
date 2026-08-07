@@ -5,6 +5,8 @@
     {
       "id": "nordvpn",
       "nom": "NordVPN",
+      "logo": "/img/logos/nordvpn.png",
+      "site_officiel": "https://nordvpn.com",
       "prix_mensuel_engagement_eur": 3.09,
       "prix_mensuel_sans_engagement_eur": null,
       "devise_source": "EUR",
@@ -15,13 +17,21 @@
       "nb_pays": null,
       "paiement_anonyme": null,
       "sources": [
-        {"label": "Security.org — NordVPN Pricing 2026", "url": "https://www.security.org/vpn/nordvpn/"},
-        {"label": "Tom's Guide — NordVPN no-logs audit", "url": "https://www.tomsguide.com/computing/vpns/nordvpn-will-never-store-your-data-and-it-can-prove-it"}
+        {
+          "label": "Security.org — NordVPN Pricing 2026",
+          "url": "https://www.security.org/vpn/nordvpn/"
+        },
+        {
+          "label": "Tom's Guide — NordVPN no-logs audit",
+          "url": "https://www.tomsguide.com/computing/vpns/nordvpn-will-never-store-your-data-and-it-can-prove-it"
+        }
       ]
     },
     {
       "id": "expressvpn",
       "nom": "ExpressVPN",
+      "logo": "/img/logos/expressvpn.png",
+      "site_officiel": "https://www.expressvpn.com",
       "prix_mensuel_engagement_usd": 2.79,
       "prix_mensuel_sans_engagement_usd": 12.99,
       "devise_source": "USD",
@@ -32,12 +42,17 @@
       "nb_pays": 105,
       "paiement_anonyme": null,
       "sources": [
-        {"label": "Security.org — ExpressVPN Pricing 2026", "url": "https://www.security.org/vpn/expressvpn/"}
+        {
+          "label": "Security.org — ExpressVPN Pricing 2026",
+          "url": "https://www.security.org/vpn/expressvpn/"
+        }
       ]
     },
     {
       "id": "surfshark",
       "nom": "Surfshark",
+      "logo": "/img/logos/surfshark.png",
+      "site_officiel": "https://surfshark.com",
       "prix_mensuel_engagement_usd": 2.49,
       "prix_mensuel_sans_engagement_usd": 15.45,
       "devise_source": "USD",
@@ -50,13 +65,21 @@
       "paiement_anonyme": null,
       "note_supplementaire": "IP temporairement conservee pendant la session active, supprimee dans les 15 minutes suivant la deconnexion (anti-abus). Parc de serveurs 100% RAM-only depuis 2020.",
       "sources": [
-        {"label": "Security.org — Surfshark Review 2026", "url": "https://www.security.org/vpn/surfshark/review/"},
-        {"label": "TechRadar — audit Surfshark", "url": "https://www.techradar.com/vpn/vpn-privacy-security/surfshark-reaffirms-its-commitment-to-user-privacy-in-independent-audit"}
+        {
+          "label": "Security.org — Surfshark Review 2026",
+          "url": "https://www.security.org/vpn/surfshark/review/"
+        },
+        {
+          "label": "TechRadar — audit Surfshark",
+          "url": "https://www.techradar.com/vpn/vpn-privacy-security/surfshark-reaffirms-its-commitment-to-user-privacy-in-independent-audit"
+        }
       ]
     },
     {
       "id": "protonvpn",
       "nom": "Proton VPN",
+      "logo": "/img/logos/protonvpn.png",
+      "site_officiel": "https://protonvpn.com",
       "prix_mensuel_engagement_usd": 2.99,
       "prix_mensuel_sans_engagement_usd": 9.99,
       "devise_source": "USD",
@@ -69,12 +92,17 @@
       "paiement_anonyme": null,
       "note_supplementaire": "N'utilise pas de serveurs RAM-only (a la difference de plusieurs concurrents de ce comparatif).",
       "sources": [
-        {"label": "Proton VPN — 5th annual no-logs audit", "url": "https://protonvpn.com/blog/no-logs-audit"}
+        {
+          "label": "Proton VPN — 5th annual no-logs audit",
+          "url": "https://protonvpn.com/blog/no-logs-audit"
+        }
       ]
     },
     {
       "id": "mullvad",
       "nom": "Mullvad",
+      "logo": "/img/logos/mullvad.png",
+      "site_officiel": "https://mullvad.net",
       "prix_mensuel_engagement_eur": 5,
       "prix_mensuel_sans_engagement_eur": 5,
       "devise_source": "EUR",
@@ -86,13 +114,21 @@
       "paiement_anonyme": "Carte, PayPal, virement, Bitcoin, Bitcoin Lightning, Monero, especes envoyees par courrier",
       "note_supplementaire": "Pas de compte email requis : numero de compte genere automatiquement. Prix fixe unique, sans palier ni hausse au renouvellement.",
       "sources": [
-        {"label": "Security.org — Mullvad Review 2026", "url": "https://www.security.org/vpn/mullvad/"},
-        {"label": "VPN.com — Mullvad Security", "url": "https://www.vpn.com/vpn/mullvad/security/"}
+        {
+          "label": "Security.org — Mullvad Review 2026",
+          "url": "https://www.security.org/vpn/mullvad/"
+        },
+        {
+          "label": "VPN.com — Mullvad Security",
+          "url": "https://www.vpn.com/vpn/mullvad/security/"
+        }
       ]
     },
     {
       "id": "cyberghost",
       "nom": "CyberGhost",
+      "logo": "/img/logos/cyberghost.png",
+      "site_officiel": "https://www.cyberghostvpn.com",
       "prix_mensuel_engagement_usd": 2.03,
       "prix_mensuel_sans_engagement_usd": null,
       "devise_source": "USD",
@@ -104,15 +140,23 @@
       "paiement_anonyme": null,
       "note_supplementaire": "Serveurs \"NoSpy\" detenus en propre, situes en Roumanie.",
       "sources": [
-        {"label": "Security.org — CyberGhost Pricing 2026", "url": "https://www.security.org/vpn/cyberghost/"},
-        {"label": "VPN.com — CyberGhost Security", "url": "https://www.vpn.com/vpn/cyberghost/security/"}
+        {
+          "label": "Security.org — CyberGhost Pricing 2026",
+          "url": "https://www.security.org/vpn/cyberghost/"
+        },
+        {
+          "label": "VPN.com — CyberGhost Security",
+          "url": "https://www.vpn.com/vpn/cyberghost/security/"
+        }
       ]
     },
     {
       "id": "pia",
       "nom": "Private Internet Access (PIA)",
+      "logo": "/img/logos/pia.png",
+      "site_officiel": "https://www.privateinternetaccess.com",
       "prix_mensuel_engagement_usd": 1.33,
-      "prix_mensuel_sans_engagement_usd": 4.70,
+      "prix_mensuel_sans_engagement_usd": 4.7,
       "devise_source": "USD",
       "juridiction": "Etats-Unis",
       "juridiction_note": "Politique no-logs testee reellement lors d'une assignation du FBI en 2016 (rien a transmettre).",
@@ -123,12 +167,17 @@
       "paiement_anonyme": null,
       "note_supplementaire": "Infrastructure 100% RAM-only. Presence dans les 50 etats americains.",
       "sources": [
-        {"label": "Gizmodo — PIA Pricing 2026", "url": "https://gizmodo.com/best-vpn/private-internet-access/pricing"}
+        {
+          "label": "Gizmodo — PIA Pricing 2026",
+          "url": "https://gizmodo.com/best-vpn/private-internet-access/pricing"
+        }
       ]
     },
     {
       "id": "ivpn",
       "nom": "IVPN",
+      "logo": "/img/logos/ivpn.png",
+      "site_officiel": "https://www.ivpn.net",
       "prix_mensuel_engagement_eur": 6,
       "prix_mensuel_sans_engagement_eur": 6,
       "devise_source": "EUR",
@@ -140,13 +189,21 @@
       "paiement_anonyme": "Especes, cryptomonnaies ; inscription possible sans adresse email",
       "note_supplementaire": "Serveurs RAM-only. Offre Pro (10 EUR/mois) avec multi-hop et port forwarding.",
       "sources": [
-        {"label": "European Purpose — IVPN Review 2026", "url": "https://europeanpurpose.com/tool/ivpn"},
-        {"label": "vpnMentor — IVPN Review 2026", "url": "https://www.vpnmentor.com/reviews/ivpn/"}
+        {
+          "label": "European Purpose — IVPN Review 2026",
+          "url": "https://europeanpurpose.com/tool/ivpn"
+        },
+        {
+          "label": "vpnMentor — IVPN Review 2026",
+          "url": "https://www.vpnmentor.com/reviews/ivpn/"
+        }
       ]
     },
     {
       "id": "windscribe",
       "nom": "Windscribe",
+      "logo": "/img/logos/windscribe.png",
+      "site_officiel": "https://windscribe.com",
       "prix_mensuel_engagement_usd": 3,
       "prix_mensuel_sans_engagement_usd": null,
       "devise_source": "USD",
@@ -158,12 +215,17 @@
       "paiement_anonyme": null,
       "note_supplementaire": "Tarification atypique : 1 USD/mois par pays choisi (minimum 3 USD/mois) plutot qu'un tarif unique donnant acces a tout le reseau.",
       "sources": [
-        {"label": "Security.org — Windscribe Review 2026", "url": "https://www.security.org/vpn/windscribe/review/"}
+        {
+          "label": "Security.org — Windscribe Review 2026",
+          "url": "https://www.security.org/vpn/windscribe/review/"
+        }
       ]
     },
     {
       "id": "privadovpn",
       "nom": "PrivadoVPN",
+      "logo": "/img/logos/privadovpn.png",
+      "site_officiel": "https://privadovpn.com",
       "prix_mensuel_engagement_usd": 1.11,
       "prix_mensuel_sans_engagement_usd": 1.99,
       "devise_source": "USD",
@@ -175,8 +237,14 @@
       "nb_pays": 50,
       "paiement_anonyme": null,
       "sources": [
-        {"label": "VPN.com — PrivadoVPN Review", "url": "https://www.vpn.com/vpn/privadovpn/"},
-        {"label": "FindCheapVPNs — Is PrivadoVPN Safe?", "url": "https://findcheapvpns.com/guides/is-privadovpn-safe/"}
+        {
+          "label": "VPN.com — PrivadoVPN Review",
+          "url": "https://www.vpn.com/vpn/privadovpn/"
+        },
+        {
+          "label": "FindCheapVPNs — Is PrivadoVPN Safe?",
+          "url": "https://findcheapvpns.com/guides/is-privadovpn-safe/"
+        }
       ]
     }
   ]

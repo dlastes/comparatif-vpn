@@ -119,11 +119,59 @@ documente dans le CLAUDE.md de PrixDuMetre.
 
 ## Non verifie
 
-- Rendu reel dans un navigateur (interaction avec le tri du tableau, responsive mobile) —
-  extension Chrome non testee sur ce projet specifiquement a la date d'ecriture. A verifier
-  avant de considerer le site pret pour du trafic reel.
 - Aucun compte Cloudflare Pages ni depot GitHub crees pour ce projet a la date d'ecriture —
   voir "Deploiement" ci-dessous pour ce qui reste a faire par le mainteneur.
+
+## Refonte accueil : tableau immediat + logos (2026-08-07, suite de session)
+
+Retour du mainteneur apres verification en navigateur : la page d'accueil cachait le
+comparatif derriere du texte marketing ("blabla") et un clic vers `/comparatif.html` — pas ce
+qu'on attend d'un site dont la seule raison d'etre est le tableau. Corrige :
+
+- **Le tableau comparatif est maintenant rendu directement sur `index.html`**, juste apres un
+  H1 + une phrase d'intro (avant : un hero avec paragraphe + 2 boutons CTA renvoyant vers une
+  page separee). Toujours triable au clic sur une colonne (`site/js/app.js`, inchange dans sa
+  logique de tri).
+- **Rendu statique du tableau (SEO)** : les lignes du `<tbody>` sont desormais generees a la
+  build (`build/generer_tableau.py`, nouveau script) et injectees dans `index.html` ET
+  `comparatif.html` entre des marqueurs `<!-- TABLEAU:DEBUT/FIN -->`, plutot que rendues
+  uniquement par un `fetch()` cote client comme avant. Un crawler qui n'execute pas le JS (ou
+  avec delai) voyait "Chargement..." a la place du contenu qui justifie la page — corrige.
+  `app.js` reste necessaire pour le tri interactif : il regenere le meme balisage au clic sur
+  une colonne (les deux chemins de rendu — Python a la build, JS au clic — doivent rester en
+  phase, voir le format identique des deux `<td>` "Fournisseur").
+- **Logos ajoutes** : `site/img/logos/<id>.png` (80x80, convertis via Pillow depuis le favicon
+  officiel de chaque fournisseur — `favicon.ico` standard pour 8 d'entre eux, chemin
+  specifique trouve dans le `<head>` de leur site pour Surfshark et IVPN qui n'exposent pas de
+  `/favicon.ico` classique). Utilises dans le tableau, les nouvelles fiches courtes de
+  l'accueil et l'entete des pages `/avis/<id>.html`. Domaines verifies un par un (requete
+  reelle, code 200) avant de servir de source aux logos et aux nouveaux liens "Site officiel".
+- **Nouveau champ `site_officiel`** dans `site/data/vpns.json` pour chacun des 10
+  fournisseurs, et lien "Site officiel ↗" (`rel="nofollow noopener sponsored"`) ajoute dans
+  chaque ligne du tableau et chaque fiche — annonce dans le CLAUDE.md d'origine
+  ("les liens vers chaque fournisseur pointent vers leur site officiel") mais jamais
+  effectivement implemente jusqu'ici. `rel="sponsored"` pose par anticipation d'une
+  eventuelle inscription a un programme d'affiliation future (voir "Pourquoi ce projet
+  existe") — recommandation Google pour ce type de lien, sans attendre d'avoir un vrai code
+  de tracking a poser dessus.
+- **Nouvelle section "Chaque fournisseur en detail"** sur l'accueil (`site/index.html`,
+  generee par le meme script) : une carte par fournisseur avec logo, badge audite/non audite,
+  et une description tiree de `juridiction_note` (deja sourcee, jamais de nouveau texte
+  invente pour l'occasion) — repond au "description de chaque avec logo" demande, sans
+  ajouter de champ non sourced au JSON.
+- Sections "Trois selections" et "Guides" repoussees apres le tableau et les fiches courtes
+  (avant : entre le hero et le comparatif) — elles restent sur la page, juste plus bas.
+- `ASSET_VERSION` (build/config.py) passe de 1 a 2, `?v=1` -> `?v=2` sur toutes les pages
+  ecrites a la main (methodologie/confidentialite/guides) : cache-busting CSS/JS, meme
+  convention documentee dans le CLAUDE.md de ValeurEcole.
+
+**Verifie** : les 3 pages generatrices (`generer_avis.py`, `generer_tableau.py`,
+`generer_sitemap.py`) relancees avec succes ; 280 liens internes verifies (0 casse, meme
+methode que les autres sites de la famille) ; capture d'ecran Playwright (accueil desktop et
+mobile 390px, page de tri sur `/comparatif.html` — le tri fonctionne toujours apres clic,
+teste avec la colonne prix) ; rendu de `/avis/mullvad.html` avec logo + lien officiel.
+**Toujours non verifie** : rendu reel sur un vrai navigateur/appareil mobile (Playwright
+headless seulement, extension Chrome indisponible dans cet environnement).
 
 ## Publicite AdSense (2026-08-07)
 
