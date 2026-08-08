@@ -239,36 +239,36 @@ verification de compte ET sans que Google approuve le site apres examen (delai v
 generalement plusieurs jours), aucune annonce ne s'affichera reellement meme si la balise est
 deja en place.
 
-## Deploiement — ce qui reste a faire par le mainteneur
+## Déploiement
 
-Cet environnement n'a ni identifiants GitHub (pas de `git push` possible), ni acces API
-Cloudflare pour la gestion de Pages (seul un connecteur MCP limite est disponible, qui ne
-couvre pas la creation de projets Pages) — meme limite que documentee sur les autres sites de
-la famille cree/redesigne cette meme periode. Le depot local est initialise et commite
-(`git init` + premier commit, 29 fichiers, verifie via `git show --stat`), mais :
+**Périmé, la section ci-dessous la remplace** : le dépôt GitHub `dlastes/comparatif-vpn`
+existe, le déploiement fonctionne. La branche locale est bien restée `master` (jamais
+renommée), couverte par le `on: push: branches: [main, master]` du workflow.
 
-1. **Creer le depot GitHub** `dlastes/comparatif-vpn` (prive, comme les autres) et `git push`
-   depuis une machine ou les identifiants du mainteneur sont deja configures.
-2. **Creer le projet Cloudflare Pages** (dashboard, dossier de sortie = `site`, aucune commande
-   de build — tout est pre-genere et commite).
-3. **Ajouter le secret `CLOUDFLARE_API_TOKEN`** dans les parametres GitHub Actions du depot,
-   pour que `.github/workflows/deploy.yml` (deja pret, meme pattern que PleinMalin) puisse
-   deployer automatiquement a chaque push.
-4. Une fois en ligne : ajouter le site a Google Search Console (verification HTML-file, meme
-   procedure que les autres sites) et soumettre `sitemap.xml`.
+Vérifié pour de vrai le 2026-08-08 (`git log`, contenu réel du workflow, `wrangler pages
+project list` / `wrangler pages deployment list` — jamais supposé depuis cette doc).
 
-**Detail technique laisse en l'etat** : la branche locale s'appelle `master`, pas `main`
-(une tentative de renommage via `git branch -m` a echoue — le montage Windows de cet
-environnement a laisse des fichiers `.lock` orphelins dans `.git/` apres le premier commit,
-non supprimables meme en `rm -f` malgre des permissions `rwx` normales, memes symptomes que
-le warning `unable to unlink` deja documente sur `mon-autre-app` cette meme session, mais ici
-bloquant plutot que non-fatal). `.github/workflows/deploy.yml` a ete elargi pour accepter un
-push sur `main` OU `master` (`on: push: branches: [main, master]`) afin que le deploiement
-fonctionne quel que soit le nom de branche final — cette modification, elle, n'a pas pu etre
-commitee pour la meme raison (verifiable via `git diff` : un seul fichier modifie, non commite).
-Le mainteneur peut soit pousser tel quel (`master`, le workflow le couvre), soit renommer la
-branche en `main` depuis son propre git (aucun probleme de verrou attendu hors de ce montage)
-avant de pousser, puis recommiter le fichier `deploy.yml` elargi si souhaite.
+- **Mécanisme** : `.github/workflows/deploy.yml` (nommé différemment des autres sites de la
+  famille, qui utilisent `deploy-cloudflare-pages.yml`) + `cloudflare/wrangler-action@v3`.
+  Déclenché sur push vers `main` **ou** `master`. **Node 20 pinné explicitement**
+  (`actions/setup-node@v4`, `node-version: 20`, ajouté le 2026-08-08 par le mainteneur
+  directement via l'éditeur web GitHub — absent à la création du fichier, cause d'un échec
+  quasi certain sur le premier push une fois le runner par défaut passé à Node 24, qui casse la
+  résolution du binaire natif `@cloudflare/workerd-linux-64` dont dépend `wrangler-action@v3` —
+  **ne jamais retirer cette étape**, même bug que sur les 7 autres sites de la famille ce
+  même jour).
+- **Build** : aucun — `site/` est un site statique pré-généré, committé tel quel. Commande :
+  `wrangler pages deploy site --project-name=comparatif-vpn`.
+- **Projet Cloudflare Pages** : `comparatif-vpn` (confirmé via `wrangler pages project list`),
+  domaine `comparatif-vpn.pages.dev`.
+- **Branche de production réelle côté Cloudflare** : `master` (confirmé via `wrangler pages
+  deployment list --project-name=comparatif-vpn` — `Environment: Production`).
+- **Intégration git native Cloudflare** : toujours active en parallèle du workflow (2
+  déploiements Production distincts observés à quelques minutes d'écart pour le même commit,
+  après l'ajout du fix Node 20). Pas cassé, juste redondant — un double build à chaque push.
+- **Secret `CLOUDFLARE_API_TOKEN`** : repo GitHub `dlastes/comparatif-vpn` → Settings → Secrets
+  and variables → Actions. Existence confirmée indirectement : le workflow a produit un
+  déploiement Production réussi après l'ajout du fix Node 20 (contenu vérifié en ligne).
 
 ## Reste a faire
 
