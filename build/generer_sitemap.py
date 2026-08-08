@@ -17,6 +17,7 @@ PAGES_FIXES = [
     "/methodologie.html",
     "/confidentialite.html",
     "/guides/",
+    "/guides/quest-ce-qu-un-vpn.html",
     "/guides/juridiction-vpn.html",
     "/guides/comprendre-audit-no-logs.html",
     "/guides/paiement-anonyme-vpn.html",

@@ -8,14 +8,14 @@
       "logo": "/img/logos/nordvpn.png",
       "site_officiel": "https://nordvpn.com",
       "prix_mensuel_engagement_eur": 3.09,
-      "prix_mensuel_sans_engagement_eur": null,
+      "prix_mensuel_sans_engagement_eur": 12.99,
       "devise_source": "EUR",
       "juridiction": "Panama",
       "juridiction_note": "Aucune loi de conservation des donnees obligatoire au Panama.",
       "audit_no_logs": "Deloitte — 6e audit annuel consecutif, publie en fevrier 2026",
-      "nb_serveurs": null,
-      "nb_pays": null,
-      "paiement_anonyme": null,
+      "nb_serveurs": 9200,
+      "nb_pays": 129,
+      "paiement_anonyme": "Cryptomonnaies (Bitcoin, Ethereum et autres) via prestataire tiers, en plus de carte, PayPal, Google Pay, Amazon Pay, UnionPay, Alipay",
       "sources": [
         {
           "label": "Security.org — NordVPN Pricing 2026",
@@ -24,9 +24,21 @@
         {
           "label": "Tom's Guide — NordVPN no-logs audit",
           "url": "https://www.tomsguide.com/computing/vpns/nordvpn-will-never-store-your-data-and-it-can-prove-it"
+        },
+        {
+          "label": "iPhon.fr — Tarifs NordVPN 2026",
+          "url": "https://www.iphon.fr/vpn/nordvpn/tarifs"
+        },
+        {
+          "label": "iPhon.fr — Modes de paiement NordVPN",
+          "url": "https://www.iphon.fr/vpn/nordvpn/modes-paiement"
+        },
+        {
+          "label": "Clubic — Test NordVPN 2026",
+          "url": "https://www.clubic.com/test-produit/article-846816-1-test-nordvpn-fournisseurs-vpn.html"
         }
       ],
-      "notre_avis": "NordVPN se distingue surtout par la regularite de son audit no-logs : Deloitte l'a verifie six annees consecutives, ce qui en fait l'historique le plus stable de ce comparatif plutot que le plus spectaculaire. Le Panama comme juridiction reste un argument commercial recurrent chez ce fournisseur, mais aucune donnee de ce comparatif ne permet de le distinguer nettement des autres juridictions hors Five Eyes presentes ici. A prix egal ou inferieur a ses concurrents directs, c'est un choix raisonnable pour qui veut un audit recent sans avoir a comparer des dizaines de rapports."
+      "notre_avis": "NordVPN se distingue surtout par la regularite de son audit no-logs : Deloitte l'a verifie six annees consecutives, ce qui en fait l'historique le plus stable de ce comparatif plutot que le plus spectaculaire. Le Panama comme juridiction reste un argument commercial recurrent chez ce fournisseur, mais aucune donnee de ce comparatif ne permet de le distinguer nettement des autres juridictions hors Five Eyes presentes ici. Avec 9200 serveurs dans 129 pays, c'est aussi l'un des plus grands reseaux de ce comparatif, juste derriere CyberGhost. Le prix sans engagement (12,99 €/mois) est en revanche plus de 4 fois superieur au tarif avec engagement de 2 ans (3,09 €/mois) -- un ecart a garder en tete avant de choisir la duree d'abonnement."
     },
     {
       "id": "expressvpn",
@@ -41,14 +53,18 @@
       "audit_no_logs": "23 audits au total ; dernier par KPMG en 2025 (no-logs) ; PwC, Cure53 et F-Secure ont aussi audite apps, extensions et le protocole Lightway",
       "nb_serveurs": 3000,
       "nb_pays": 105,
-      "paiement_anonyme": null,
+      "paiement_anonyme": "Bitcoin et autres cryptomonnaies (Ethereum, XRP, USDC, BUSD, PAX, GUSD) via BitPay -- email seul requis a l'inscription",
       "sources": [
         {
           "label": "Security.org — ExpressVPN Pricing 2026",
           "url": "https://www.security.org/vpn/expressvpn/"
+        },
+        {
+          "label": "ExpressVPN — Buy with Bitcoin",
+          "url": "https://www.expressvpn.com/features/buy-vpn-with-bitcoin"
         }
       ],
-      "notre_avis": "ExpressVPN cumule le plus grand nombre d'audits independants de ce comparatif : 23 au total, repartis entre plusieurs cabinets (KPMG sur le no-logs, PwC, Cure53 et F-Secure sur les applications et le protocole Lightway). C'est la verification la plus large en surface, pas seulement la plus recente. En contrepartie, aucune methode de paiement anonyme n'est documentee pour ce fournisseur, et le prix avec engagement (2,79 $/mois) grimpe fortement sans engagement (12,99 $/mois) -- a comparer avec les offres a prix fixe comme Mullvad si l'objectif est de na pas subir de hausse au renouvellement."
+      "notre_avis": "ExpressVPN cumule le plus grand nombre d'audits independants de ce comparatif : 23 au total, repartis entre plusieurs cabinets (KPMG sur le no-logs, PwC, Cure53 et F-Secure sur les applications et le protocole Lightway). C'est la verification la plus large en surface, pas seulement la plus recente. Le paiement en Bitcoin et autres cryptomonnaies via BitPay ne demande qu'une adresse email a l'inscription, sans nom ni coordonnees bancaires. Le prix avec engagement (2,79 $/mois) grimpe en revanche fortement sans engagement (12,99 $/mois) -- a comparer avec les offres a prix fixe comme Mullvad si l'objectif est de ne pas subir de hausse au renouvellement."
     },
     {
       "id": "surfshark",
@@ -62,9 +78,9 @@
       "juridiction_note": "Membre de l'alliance de renseignement Nine Eyes.",
       "audit_no_logs": "Deloitte — audits en 2023 et 2025",
       "nb_serveurs": 4500,
-      "nb_pays": null,
+      "nb_pays": 100,
       "nb_emplacements": 100,
-      "paiement_anonyme": null,
+      "paiement_anonyme": "Bitcoin, Ethereum, Binance Coin, Dogecoin, Litecoin, Solana, TRON, Bitcoin Cash via CoinGate",
       "note_supplementaire": "IP temporairement conservee pendant la session active, supprimee dans les 15 minutes suivant la deconnexion (anti-abus). Parc de serveurs 100% RAM-only depuis 2020.",
       "sources": [
         {
@@ -74,9 +90,13 @@
         {
           "label": "TechRadar — audit Surfshark",
           "url": "https://www.techradar.com/vpn/vpn-privacy-security/surfshark-reaffirms-its-commitment-to-user-privacy-in-independent-audit"
+        },
+        {
+          "label": "Surfshark — Buy VPN with Bitcoin",
+          "url": "https://surfshark.com/vpn-with-bitcoin"
         }
       ],
-      "notre_avis": "Surfshark combine un prix bas et un parc de serveurs consequent (4500 serveurs, infrastructure 100% RAM-only depuis 2020), avec deux audits Deloitte en 2023 et 2025. Le point a peser serieusement est la juridiction : les Pays-Bas font partie de l'alliance de renseignement Nine Eyes, contrairement a la plupart des autres fournisseurs de ce comparatif. Surfshark conserve aussi temporairement une adresse IP pendant la session active (supprimee dans les 15 minutes suivant la deconnexion, a des fins anti-abus) -- un detail rarement mis en avant mais documente par le fournisseur lui-meme."
+      "notre_avis": "Surfshark combine un prix bas et un parc de serveurs consequent (4500 serveurs dans 100 pays, infrastructure 100% RAM-only depuis 2020), avec deux audits Deloitte en 2023 et 2025. Le point a peser serieusement est la juridiction : les Pays-Bas font partie de l'alliance de renseignement Nine Eyes, contrairement a la plupart des autres fournisseurs de ce comparatif. Le paiement en cryptomonnaies (Bitcoin, Ethereum et six autres) passe par le prestataire tiers CoinGate. Surfshark conserve aussi temporairement une adresse IP pendant la session active (supprimee dans les 15 minutes suivant la deconnexion, a des fins anti-abus) -- un detail rarement mis en avant mais documente par le fournisseur lui-meme."
     },
     {
       "id": "protonvpn",
@@ -91,16 +111,24 @@
       "juridiction_note": "Aucune obligation de conservation des donnees sous le droit suisse actuel. En 2019, Proton n'a pas pu transmettre de logs a la justice car ils n'existaient pas.",
       "audit_no_logs": "Securitum — 5 audits annuels consecutifs jusqu'en 2026",
       "nb_serveurs": null,
-      "nb_pays": null,
-      "paiement_anonyme": null,
-      "note_supplementaire": "N'utilise pas de serveurs RAM-only (a la difference de plusieurs concurrents de ce comparatif).",
+      "nb_pays": 145,
+      "paiement_anonyme": "Especes/monnaie locale envoyee par courrier, en plus de carte, PayPal et Bitcoin",
+      "note_supplementaire": "N'utilise pas de serveurs RAM-only (a la difference de plusieurs concurrents de ce comparatif). Nombre exact de serveurs non communique par le fournisseur (reseau en expansion continue courant 2026) — seul le nombre de pays est retenu ici.",
       "sources": [
         {
           "label": "Proton VPN — 5th annual no-logs audit",
           "url": "https://protonvpn.com/blog/no-logs-audit"
+        },
+        {
+          "label": "TechRadar — Proton VPN expands to 145 countries",
+          "url": "https://www.techradar.com/vpn/vpn-services/proton-vpn-expands-server-network-to-145-countries-and-is-now-the-top-service-for-global-coverage"
+        },
+        {
+          "label": "Privacy Guides — comparatif VPN sans sponsors",
+          "url": "https://www.privacyguides.org/en/vpn/"
         }
       ],
-      "notre_avis": "Proton VPN a ete verifie cinq annees consecutives par Securitum, et son cas d'usage le plus concret reste juridique : en 2019, l'entreprise n'a pas pu transmettre de logs a la justice suisse car ils n'existaient tout simplement pas, un precedent reel plutot qu'une promesse marketing. A l'inverse de la plupart de ses concurrents de ce comparatif, Proton VPN n'utilise pas une infrastructure exclusivement RAM-only -- une difference d'architecture documentee par le fournisseur, a mettre en balance avec son offre gratuite, rare dans ce comparatif."
+      "notre_avis": "Proton VPN a ete verifie cinq annees consecutives par Securitum, et son cas d'usage le plus concret reste juridique : en 2019, l'entreprise n'a pas pu transmettre de logs a la justice suisse car ils n'existaient tout simplement pas, un precedent reel plutot qu'une promesse marketing. Avec des serveurs dans 145 pays, c'est la couverture geographique la plus large de ce comparatif en nombre de pays (le nombre exact de serveurs n'est pas communique par le fournisseur). A l'inverse de la plupart de ses concurrents de ce comparatif, Proton VPN n'utilise pas une infrastructure exclusivement RAM-only -- une difference d'architecture documentee par le fournisseur, a mettre en balance avec son offre gratuite, rare dans ce comparatif, et son paiement possible en especes envoyees par courrier."
     },
     {
       "id": "mullvad",
@@ -135,14 +163,14 @@
       "logo": "/img/logos/cyberghost.png",
       "site_officiel": "https://www.cyberghostvpn.com",
       "prix_mensuel_engagement_usd": 2.03,
-      "prix_mensuel_sans_engagement_usd": null,
+      "prix_mensuel_sans_engagement_usd": 12.99,
       "devise_source": "USD",
       "juridiction": "Roumanie",
       "juridiction_note": "Hors alliances 5/9/14 Eyes, pas de loi de conservation des donnees obligatoire.",
       "audit_no_logs": "Deloitte Romania — audite 3 fois, dernier au T4 2025",
       "nb_serveurs": 11500,
       "nb_pays": 100,
-      "paiement_anonyme": null,
+      "paiement_anonyme": "Bitcoin, Bitcoin Cash, Ethereum, USDC et autres via BitPay, en plus de carte et PayPal",
       "note_supplementaire": "Serveurs \"NoSpy\" detenus en propre, situes en Roumanie.",
       "sources": [
         {
@@ -152,9 +180,17 @@
         {
           "label": "VPN.com — CyberGhost Security",
           "url": "https://www.vpn.com/vpn/cyberghost/security/"
+        },
+        {
+          "label": "AllAboutCookies — CyberGhost Price 2026",
+          "url": "https://allaboutcookies.org/cyberghost-vpn-price"
+        },
+        {
+          "label": "BitPay — CyberGhost directory",
+          "url": "https://www.bitpay.com/directory/cyberghost"
         }
       ],
-      "notre_avis": "CyberGhost affiche le plus grand parc de serveurs de ce comparatif (11 500 serveurs dans 100 pays), avec des serveurs \"NoSpy\" detenus en propre en Roumanie et trois audits Deloitte Romania, le dernier au dernier trimestre 2025. La Roumanie, hors des alliances de surveillance 5/9/14 Eyes et sans obligation de conservation des donnees, est un argument de juridiction credible. Aucune methode de paiement anonyme n'est en revanche documentee pour ce fournisseur, contrairement a Mullvad ou IVPN dans ce meme comparatif."
+      "notre_avis": "CyberGhost affiche le plus grand parc de serveurs de ce comparatif (11 500 serveurs dans 100 pays), avec des serveurs \"NoSpy\" detenus en propre en Roumanie et trois audits Deloitte Romania, le dernier au dernier trimestre 2025. La Roumanie, hors des alliances de surveillance 5/9/14 Eyes et sans obligation de conservation des donnees, est un argument de juridiction credible. Le paiement en cryptomonnaies via BitPay est accepte, mais l'ecart de prix est marque : 2,03 $/mois avec engagement contre 12,99 $/mois sans engagement, un rapport de plus de 6 -- l'un des plus forts ecarts de ce comparatif."
     },
     {
       "id": "pia",
@@ -170,15 +206,19 @@
       "nb_serveurs": null,
       "nb_pays": null,
       "nb_emplacements": 91,
-      "paiement_anonyme": null,
-      "note_supplementaire": "Infrastructure 100% RAM-only. Presence dans les 50 etats americains.",
+      "paiement_anonyme": "Bitcoin, Bitcoin Cash, Ethereum, Wrapped Bitcoin, Dogecoin, Litecoin via BitPay -- inscription avec email seul, aucun nom ni adresse requis",
+      "note_supplementaire": "Infrastructure 100% RAM-only. Presence dans les 50 etats americains. Nombre exact de serveurs non communique par le fournisseur, seul le nombre d'emplacements (91) est publie.",
       "sources": [
         {
           "label": "Gizmodo — PIA Pricing 2026",
           "url": "https://gizmodo.com/best-vpn/private-internet-access/pricing"
+        },
+        {
+          "label": "Private Internet Access — Buy VPN with Bitcoin",
+          "url": "https://www.privateinternetaccess.com/vpn-features/pay-vpn-with-bitcoin"
         }
       ],
-      "notre_avis": "Private Internet Access affiche le prix le plus bas de ce comparatif (1,33 $/mois avec engagement) et le seul test grandeur nature documente ici avec autant de precision : une assignation du FBI en 2016 a laquelle l'entreprise n'avait litteralement rien a transmettre. Cela dit, PIA est domicilie aux Etats-Unis, le pays le plus surveille des juridictions presentes dans ce comparatif (membre du noyau Five Eyes) -- un point a ne pas ignorer meme si le seul cas reel connu a joue en sa faveur. Infrastructure RAM-only et presence dans les 50 etats americains completent le profil."
+      "notre_avis": "Private Internet Access affiche le prix le plus bas de ce comparatif (1,33 $/mois avec engagement) et le seul test grandeur nature documente ici avec autant de precision : une assignation du FBI en 2016 a laquelle l'entreprise n'avait litteralement rien a transmettre. Cela dit, PIA est domicilie aux Etats-Unis, le pays le plus surveille des juridictions presentes dans ce comparatif (membre du noyau Five Eyes) -- un point a ne pas ignorer meme si le seul cas reel connu a joue en sa faveur. Le paiement en cryptomonnaies via BitPay ne demande qu'un email a l'inscription (ni nom ni adresse). Infrastructure RAM-only et presence dans les 50 etats americains completent le profil."
     },
     {
       "id": "ivpn",
@@ -191,10 +231,10 @@
       "juridiction": "Gibraltar",
       "juridiction_note": "Base legale en Suisse. Hors grandes alliances de surveillance. Rapport de transparence publie sur les demandes des autorites.",
       "audit_no_logs": "Cure53 — audit annuel, 8e edition prevue en 2026",
-      "nb_serveurs": null,
-      "nb_pays": null,
+      "nb_serveurs": 166,
+      "nb_pays": 41,
       "paiement_anonyme": "Especes, cryptomonnaies ; inscription possible sans adresse email",
-      "note_supplementaire": "Serveurs RAM-only. Offre Pro (10 EUR/mois) avec multi-hop et port forwarding.",
+      "note_supplementaire": "Serveurs RAM-only. Offre Pro (10 EUR/mois) avec multi-hop et port forwarding. Le nombre de pays couverts varie de 35 a 41 selon la source consultee (35-48 villes pour Cloudwards, 41 pays pour vpnMentor) — chiffre le plus bas du comparatif dans tous les cas, IVPN privilegiant un reseau restreint et directement controle plutot qu'une large couverture.",
       "sources": [
         {
           "label": "European Purpose — IVPN Review 2026",
@@ -203,9 +243,13 @@
         {
           "label": "vpnMentor — IVPN Review 2026",
           "url": "https://www.vpnmentor.com/reviews/ivpn/"
+        },
+        {
+          "label": "Cloudwards — IVPN Review 2026",
+          "url": "https://www.cloudwards.net/ivpn-review/"
         }
       ],
-      "notre_avis": "IVPN partage avec Mullvad le niveau d'anonymat le plus pousse de ce comparatif : inscription possible sans adresse email, paiement en especes ou en cryptomonnaies, et un rapport de transparence publie sur les demandes des autorites. L'audit Cure53 en est a sa huitieme edition annuelle prevue en 2026, une cadence reguliere. Ce niveau de confidentialite a un cout : IVPN est l'un des fournisseurs les plus chers de ce comparatif (6 €/mois), sans palier degressif visible dans les donnees recueillies ici -- un choix qui s'adresse davantage a qui priorise l'anonymat qu'au meilleur prix."
+      "notre_avis": "IVPN partage avec Mullvad le niveau d'anonymat le plus pousse de ce comparatif : inscription possible sans adresse email, paiement en especes ou en cryptomonnaies, et un rapport de transparence publie sur les demandes des autorites. L'audit Cure53 en est a sa huitieme edition annuelle prevue en 2026, une cadence reguliere. Son reseau est en revanche le plus restreint de ce comparatif (166 serveurs dans 41 pays selon vpnMentor, les sources variant entre 35 et 41 pays) -- un choix assume de reseau reduit et directement controle plutot que de couverture maximale. Ce niveau de confidentialite a aussi un cout : IVPN est l'un des fournisseurs les plus chers de ce comparatif (6 €/mois), sans palier degressif visible dans les donnees recueillies ici -- un choix qui s'adresse davantage a qui priorise l'anonymat qu'au meilleur prix ou au plus grand reseau."
     },
     {
       "id": "windscribe",
@@ -213,22 +257,31 @@
       "logo": "/img/logos/windscribe.png",
       "site_officiel": "https://windscribe.com",
       "prix_mensuel_engagement_usd": 3,
-      "prix_mensuel_sans_engagement_usd": null,
+      "prix_mensuel_sans_engagement_usd": 3,
       "devise_source": "USD",
       "juridiction": "Canada",
       "juridiction_note": "Membre de l'alliance Five Eyes, mais aucune obligation legale canadienne de conserver des logs. Deux serveurs saisis par les autorites ukrainiennes n'ont livre aucune donnee utilisateur.",
       "audit_no_logs": "Aucun audit independant dedie a la politique no-logs publie a ce jour (seulement des audits d'applications par Leviathan Security en 2021 et 2022)",
       "nb_serveurs": null,
       "nb_pays": null,
-      "paiement_anonyme": null,
-      "note_supplementaire": "Tarification atypique : 1 USD/mois par pays choisi (minimum 3 USD/mois) plutot qu'un tarif unique donnant acces a tout le reseau.",
+      "nb_emplacements": 190,
+      "paiement_anonyme": "Cryptomonnaies et cartes-cadeaux (gift cards)",
+      "note_supplementaire": "Tarification atypique : 1 USD/mois par pays choisi (minimum 3 USD/mois, deja au tarif plancher sans palier d'engagement) plutot qu'un tarif unique donnant acces a tout le reseau. 190+ emplacements de serveurs au total (chiffre officiel), nombre de pays distincts non precise separement par le fournisseur.",
       "sources": [
         {
           "label": "Security.org — Windscribe Review 2026",
           "url": "https://www.security.org/vpn/windscribe/review/"
+        },
+        {
+          "label": "Windscribe — liste officielle des serveurs",
+          "url": "https://windscribe.com/vpn-servers"
+        },
+        {
+          "label": "Windscribe — moyens de paiement",
+          "url": "https://windscribe.com/upgrade"
         }
       ],
-      "notre_avis": "Windscribe est l'un des deux fournisseurs de ce comparatif sans audit no-logs independant publie : seules des applications ont ete auditees par Leviathan Security, en 2021 et 2022, ce qui ne verifie pas la politique de conservation des donnees elle-meme. Un point positif documente existe malgre tout : deux serveurs saisis par les autorites ukrainiennes n'ont livre aucune donnee utilisateur. Sa tarification est aussi atypique dans ce comparatif : 1 $/mois par pays choisi individuellement plutot qu'un tarif unique donnant acces a tout le reseau, a bien comprendre avant de souscrire."
+      "notre_avis": "Windscribe est l'un des deux fournisseurs de ce comparatif sans audit no-logs independant publie : seules des applications ont ete auditees par Leviathan Security, en 2021 et 2022, ce qui ne verifie pas la politique de conservation des donnees elle-meme. Un point positif documente existe malgre tout : deux serveurs saisis par les autorites ukrainiennes n'ont livre aucune donnee utilisateur. Sa tarification est aussi atypique dans ce comparatif : 1 $/mois par pays choisi individuellement (minimum 3 $/mois, deja le tarif plancher, sans engagement a proprement parler) plutot qu'un tarif unique donnant acces a tout le reseau de 190+ emplacements. Le paiement en cryptomonnaies ou cartes-cadeaux est accepte, une option d'anonymat que peu de fournisseurs de ce comparatif proposent."
     },
     {
       "id": "privadovpn",
@@ -244,7 +297,7 @@
       "audit_no_logs": "Aucun audit independant publie en six ans d'activite — les engagements reposent sur les seules declarations de l'entreprise",
       "nb_serveurs": 500,
       "nb_pays": 50,
-      "paiement_anonyme": null,
+      "paiement_anonyme": "Cryptomonnaies (Bitcoin, Ethereum, Litecoin), en plus de PayPal, cartes et methodes locales (Mint, UnionPay, Sofort...)",
       "sources": [
         {
           "label": "VPN.com — PrivadoVPN Review",
@@ -253,9 +306,13 @@
         {
           "label": "FindCheapVPNs — Is PrivadoVPN Safe?",
           "url": "https://findcheapvpns.com/guides/is-privadovpn-safe/"
+        },
+        {
+          "label": "CyberInsider — PrivadoVPN Review 2026",
+          "url": "https://cyberinsider.com/vpn/reviews/privadovpn/"
         }
       ],
-      "notre_avis": "PrivadoVPN est le moins cher de ce comparatif (1,11 $/mois avec engagement) et propose une offre gratuite, mais c'est aussi le seul fournisseur sans aucun audit independant publie en six ans d'activite -- ses engagements de confidentialite reposent sur ses seules declarations. Le changement de juridiction en 2025, de la Suisse vers l'Islande suite aux reformes de surveillance suisses, est recent et documente par le fournisseur. L'Islande est hors UE et hors des alliances 5/9/14 Eyes, mais l'absence totale d'audit reste, dans ce comparatif, le plus grand ecart entre le prix et la verifiabilite reelle des promesses."
+      "notre_avis": "PrivadoVPN est le moins cher de ce comparatif (1,11 $/mois avec engagement) et propose une offre gratuite, mais c'est aussi le seul fournisseur sans aucun audit independant publie en six ans d'activite -- ses engagements de confidentialite reposent sur ses seules declarations. Le changement de juridiction en 2025, de la Suisse vers l'Islande suite aux reformes de surveillance suisses, est recent et documente par le fournisseur. L'Islande est hors UE et hors des alliances 5/9/14 Eyes, mais l'absence totale d'audit reste, dans ce comparatif, le plus grand ecart entre le prix et la verifiabilite reelle des promesses. Le paiement en cryptomonnaies est accepte, mais une adresse email reste necessaire a l'inscription, meme anonyme."
     }
   ]
 }

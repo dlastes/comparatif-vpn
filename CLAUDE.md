@@ -77,14 +77,69 @@ eux-memes. Points notables verifies pendant cette recherche, a ne pas re-deviner
   a quitte la Suisse en 2025 suite aux reformes de surveillance suisses).
 - **Dans le perimetre Nine/Fourteen Eyes** : Surfshark (Pays-Bas), Mullvad (Suede).
 - **Dans le perimetre Five Eyes** : PIA (Etats-Unis), Windscribe (Canada).
-- **Paiement anonyme documente** : seuls Mullvad (especes par courrier, Monero, pas d'email
-  requis) et IVPN (especes, cryptomonnaies, inscription sans email) — les 8 autres n'ont
-  aucune methode anonyme trouvee sur une source fiable, affiche comme tel, pas suppose absent.
+- **Paiement anonyme documente (perime, voir plus bas)** : a l'origine, seuls Mullvad et IVPN
+  avaient une methode anonyme trouvee — combie depuis pour les 8 autres, voir
+  "Trous combles + SEO" plus bas.
 - **Aucun audit no-logs independant publie** : Windscribe (seulement des audits d'application
   par Leviathan Security en 2021/2022, pas du no-logs) et PrivadoVPN (aucun audit en six ans
   d'activite) — les deux fiches l'affichent explicitement avec un encart d'alerte
   (`.encart.alerte` dans `style.css`), genere automatiquement par `generer_avis.py` des que
   la chaine `"aucun audit"` (insensible a la casse) apparait dans `audit_no_logs`.
+
+## Trous combles + contenu SEO (2026-08-08)
+
+Retour explicite du mainteneur apres la refonte visuelle du meme jour : les fiches
+individuelles (`/avis/<id>.html`) etaient jugees "beaucoup trop vides" — beaucoup de champs
+`null` ("non communique") des le premier coup d'oeil, en particulier NordVPN (3 champs sur 4
+vides). Deuxieme demande : plus de contenu SEO/technique ("qu'est-ce qu'un VPN etc").
+
+**Recherche menee (WebSearch), jamais devine** — combien de champs precedemment `null` dans
+`site/data/vpns.json` :
+- **Prix sans engagement** ajoute : NordVPN (12,99 €), CyberGhost (12,99 $). Windscribe reste
+  a 3 $ (deja son tarif plancher, pas de vrai palier engagement/sans-engagement chez ce
+  fournisseur — tarification "1 $/pays" documentee separement).
+- **Serveurs/pays** ajoutes : NordVPN (9200 serveurs, 129 pays), Proton VPN (145 pays, nombre
+  de serveurs volontairement laisse `null` — sources trouvees incoherentes entre elles,
+  20 000+ selon un agregateur non recoupe ; mieux vaut un champ manquant qu'un chiffre
+  suspect), IVPN (166 serveurs, 41 pays — **divergence de source documentee dans le JSON
+  lui-meme** : 35 a 48 selon la source, la plus recente datee retenue), Windscribe (190+
+  emplacements, chiffre officiel windscribe.com/vpn-servers), Surfshark (100 pays ajoute en
+  plus des 100 emplacements deja presents).
+- **Paiement anonyme** ajoute pour les 8 fournisseurs qui n'en avaient aucun : NordVPN,
+  ExpressVPN, Surfshark, Proton VPN, CyberGhost, PIA, Windscribe, PrivadoVPN — tous acceptent
+  au moins une cryptomonnaie via un prestataire tiers (BitPay ou CoinGate le plus souvent).
+  **Seul Mullvad reste avec un paiement especes par courrier reel** (les autres n'ont que la
+  crypto, moins anonyme qu'un paiement en especes puisqu'un prestataire tiers reste dans la
+  boucle) — ne pas presenter les 10 fournisseurs comme equivalents sur ce critere juste parce
+  que le champ n'est plus `null`.
+- Chaque `notre_avis` a ete etoffe pour integrer les nouveaux chiffres, pas juste allonge
+  artificiellement.
+
+**Pipeline** : `site/data/vpns.json` reste la source de verite. `build/generer_avis.py` genere
+les 10 fiches (son header HTML a ete corrige au passage : il ne posait pas encore le logo
+ajoute a la refonte visuelle du meme jour — sinon relancer le script l'aurait fait disparaitre
+des fiches). **Piege reel rencontre** : `index.html` et `comparatif.html` ne sont PAS generes
+(voir "Stack" plus haut) — ils ont un tableau HTML statique en dur qui duplique les memes
+donnees, sans lien avec `vpns.json` sinon la coincidence de contenu au moment ou il a ete
+ecrit. Mettre a jour `vpns.json` seul ne suffit donc pas : la table statique devient
+silencieusement perimee (et vue par les moteurs de recherche/crawlers sans JS, donc pas un
+detail mineur). Corrige par un script ponctuel `build/maj_tableau_statique.py` (patch
+chirurgical des cellules Serveurs/Paiement anonyme par regex ancree sur le lien `/avis/<id>`,
+sans toucher au reste du HTML redige a la main). `js/app.js`, lui, recharge deja `vpns.json`
+en direct au chargement de la page et re-rend le tableau — donc deja a jour automatiquement
+cote navigateur avec JS active ; le patch statique ne sert que la version pre-JS/SEO.
+
+**Contenu SEO ajoute** : nouveau guide `guides/quest-ce-qu-un-vpn.html` (definition, tunnel
+chiffre, protocoles WireGuard/OpenVPN/IKEv2, ce qu'un VPN protege vraiment vs pas — contenu
+technique general, pas de fait fournisseur-specifique donc pas de citation source individuelle
+necessaire, a la difference des fiches). Ajoute en premiere position dans la grille Guides
+(accueil + `guides/index.html`) et dans `sitemap.xml`. FAQ de l'accueil enrichie de 2 questions
+(vitesse, appareils compatibles) + 1 renvoyant vers le nouveau guide. Inspiration de mise en
+forme (pas de contenu) tiree d'un site concurrent cite par le mainteneur — aucune phrase ni
+donnee de ce site n'a ete reprise.
+
+**Verifie** : JSON valide (`json.load`), 0 lien interne casse (21 verifies), 0 erreur console,
+captures Playwright (accueil avec tableau charge en JS, fiche NordVPN, nouveau guide).
 
 ## Identite visuelle
 

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qu'est-ce qu'un VPN et comment ça marche ? | ComparatifVPN</title>
+<meta name="description" content="Définition claire d'un VPN : tunnel chiffré, changement d'adresse IP, protocoles (WireGuard, OpenVPN). Ce qu'un VPN protège vraiment, et ce qu'il ne protège pas.">
+<link rel="canonical" href="https://comparatif-vpn.pages.dev/guides/quest-ce-qu-un-vpn.html">
+<link rel="stylesheet" href="/css/style.css?v=4">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4671241466590955" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="entete">
+  <div class="conteneur entete-barre">
+    <a href="/" class="logo"><img src="/img/logo.svg" alt="" width="26" height="26" class="logo-mark">comparatif<span class="point">.</span>vpn</a>
+    <nav class="nav-principale">
+      <a href="/comparatif.html">Comparatif</a>
+      <a href="/guides/" class="actif">Guides</a>
+      <a href="/methodologie.html">Methodologie</a>
+    </nav>
+  </div>
+</header>
+
+<main class="conteneur-etroit">
+  <p class="fil-ariane"><a href="/">Accueil</a> / <a href="/guides/">Guides</a> / Qu'est-ce qu'un VPN</p>
+  <h1>Qu'est-ce qu'un VPN et comment ça marche ?</h1>
+
+  <div class="guide-corps">
+    <p>VPN signifie <strong>Virtual Private Network</strong> (réseau privé virtuel). Concrètement,
+    c'est un logiciel qui fait deux choses en même temps : il chiffre tout le trafic qui sort de
+    votre appareil, et il fait transiter ce trafic par un serveur intermédiaire avant qu'il
+    n'atteigne le site ou le service que vous consultez. Le site final voit l'adresse IP du
+    serveur VPN, pas la vôtre.</p>
+
+    <h2>Le principe : un tunnel chiffré</h2>
+    <p>Sans VPN, une connexion internet classique part de votre appareil, passe par votre
+    box/opérateur, puis directement vers le site visité — en clair pour votre opérateur
+    (qui voit quels domaines vous contactez, même en HTTPS), et avec votre adresse IP visible du
+    site final.</p>
+    <p>Avec un VPN activé, une couche supplémentaire s'ajoute : le trafic est chiffré <em>avant</em>
+    de sortir de l'appareil, transite par un tunnel jusqu'à un serveur du fournisseur VPN, puis
+    ressort vers internet avec l'adresse IP de ce serveur. Deux effets distincts, à ne pas
+    confondre :</p>
+    <ul>
+      <li><strong>Le chiffrement</strong> protège le contenu du trafic entre votre appareil et le
+      serveur VPN — utile en priorité sur un réseau que vous ne contrôlez pas (Wi-Fi public
+      d'un café, d'un aéroport, d'un hôtel), où quelqu'un sur le même réseau pourrait autrement
+      intercepter du trafic non chiffré.</li>
+      <li><strong>Le changement d'adresse IP</strong> masque votre adresse réelle aux yeux du site
+      visité, qui voit celle du serveur VPN. C'est ce qui permet, par exemple, d'apparaître comme
+      connecté depuis un autre pays.</li>
+    </ul>
+
+    <h2>Les protocoles : comment le tunnel est construit</h2>
+    <p>Le "protocole" est la technologie qui construit et sécurise ce tunnel. Les plus répandus
+    aujourd'hui :</p>
+    <ul>
+      <li><strong>WireGuard</strong> — le plus récent, code source réduit (donc plus facile à
+      auditer), généralement le plus rapide. La plupart des fournisseurs actuels l'utilisent par
+      défaut ou en proposent une variante propriétaire (NordLynx chez NordVPN, Lightway chez
+      ExpressVPN s'en inspire par ses objectifs de légèreté).</li>
+      <li><strong>OpenVPN</strong> — plus ancien, open source, très éprouvé, mais plus lent que
+      WireGuard à chiffrement égal. Reste proposé par la plupart des fournisseurs en option de
+      compatibilité.</li>
+      <li><strong>IKEv2/IPsec</strong> — courant sur mobile, se reconnecte vite après une perte de
+      signal (changement de Wi-Fi à 4G par exemple).</li>
+    </ul>
+    <p>Le choix du protocole est généralement automatique dans l'application, mais la plupart
+    permettent de le changer manuellement dans les paramètres.</p>
+
+    <h2>Ce qu'un VPN protège vraiment</h2>
+    <ul>
+      <li>Le contenu de votre trafic sur un réseau non fiable (Wi-Fi public) — plus difficile à
+      intercepter par un tiers sur le même réseau.</li>
+      <li>Votre adresse IP réelle, masquée aux sites visités et à votre fournisseur d'accès
+      internet, qui ne voit plus que vous êtes connecté au serveur VPN, pas ce que vous faites
+      derrière.</li>
+      <li>Votre localisation apparente, qui devient celle du serveur choisi — usage courant pour
+      accéder à un catalogue de streaming disponible dans un autre pays, avec la limite que
+      certains services detectent et bloquent activement les IP de VPN connus.</li>
+    </ul>
+
+    <h2>Ce qu'un VPN ne protège pas</h2>
+    <p>C'est le point le plus souvent survendu par le marketing du secteur, donc à préciser
+    explicitement :</p>
+    <ul>
+      <li><strong>Un VPN ne vous rend pas anonyme sur les comptes où vous êtes connecté.</strong>
+      Se connecter à son compte Google, Facebook ou Amazon derrière un VPN n'empêche pas ce
+      service de savoir qui vous êtes — l'IP masquée n'a plus d'effet une fois identifié par un
+      identifiant de compte.</li>
+      <li><strong>Un VPN ne bloque pas le tracking par cookies ou par empreinte du navigateur
+      (fingerprinting).</strong> Ces techniques identifient un appareil indépendamment de
+      l'adresse IP (résolution d'écran, polices installées, version du navigateur...) — un VPN
+      seul n'y change rien, il faut un bloqueur de trackers dédié.</li>
+      <li><strong>Un VPN ne protège pas contre le phishing ou les malwares.</strong> Chiffrer la
+      connexion ne filtre pas le contenu malveillant d'un site ou d'un email — certains
+      fournisseurs ajoutent un bloqueur de domaines connus en option, mais ce n'est pas une
+      fonction du VPN lui-même.</li>
+      <li><strong>Un VPN ne vous protège pas d'un fournisseur qui mentirait sur sa politique de
+      logs.</strong> C'est exactement pourquoi ce comparatif met en avant les audits
+      indépendants (voir notre <a href="/guides/comprendre-audit-no-logs.html">guide sur les
+      audits no-logs</a>) plutôt que la seule promesse "no-logs" affichée sur un site officiel.</li>
+    </ul>
+
+    <h2>Pourquoi la juridiction du fournisseur compte</h2>
+    <p>Le fournisseur VPN, lui, voit passer votre trafic réel avant qu'il ne soit rechiffré et
+    envoyé sur internet — c'est lui qui devient le point de confiance. Sa politique de
+    conservation des données (logs) et le pays où il est enregistré légalement déterminent ce
+    qu'il pourrait être contraint de communiquer aux autorités. Voir notre
+    <a href="/guides/juridiction-vpn.html">guide sur la juridiction et les alliances de
+    surveillance</a> pour le détail.</p>
+
+    <h2>VPN gratuit ou payant ?</h2>
+    <p>Un VPN a des coûts d'infrastructure réels (serveurs, bande passante) qui doivent être
+    financés d'une façon ou d'une autre. Voir notre <a href="/guides/vpn-gratuit.html">guide sur
+    les VPN gratuits</a> pour ce qui distingue un modèle économique transparent d'un autre.</p>
+
+    <p>Pour comparer les fournisseurs sur des critères vérifiables plutôt que sur des promesses
+    marketing, voir le <a href="/comparatif.html">tableau comparatif</a> de ce site.</p>
+  </div>
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <p>ComparatifVPN — comparateur independant.</p>
+    <div class="pied-liens">
+      <a href="/methodologie.html">Methodologie</a>
+      <a href="/comparatif.html">Comparatif</a>
+      <a href="/guides/">Guides</a>
+      <a href="/confidentialite.html">Confidentialite</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

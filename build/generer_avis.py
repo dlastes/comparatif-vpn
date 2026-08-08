@@ -100,7 +100,7 @@ def rendre_fiche(vpn):
 
 <header class="entete">
   <div class="conteneur entete-barre">
-    <a href="/" class="logo">comparatif<span class="point">.</span>vpn</a>
+    <a href="/" class="logo"><img src="/img/logo.svg" alt="" width="26" height="26" class="logo-mark">comparatif<span class="point">.</span>vpn</a>
     <nav class="nav-principale">
       <a href="/comparatif.html">Comparatif</a>
       <a href="/guides/">Guides</a>
