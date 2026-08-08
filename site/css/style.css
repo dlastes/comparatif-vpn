@@ -1,31 +1,42 @@
-/* ComparatifVPN — identite visuelle "console securite" : fond sombre quasi-noir,
-   accent emeraude/menthe (confiance/chiffrement) + violet (vie privee) en second plan,
-   chiffres et donnees techniques en police monospace systeme (aucune police chargee
-   depuis un CDN externe — coherent avec le sujet du site : un comparatif VPN qui
-   ferait des requetes vers Google Fonts a chaque page serait un peu ironique).
-   Volontairement distinct des autres sites de la famille : aucun n'utilise de theme
-   sombre "terminal", tous sont soit l'aurora indigo/cyan des apps mobiles, soit des
-   identites editoriales claires (vert sapin, marine/or, asphalte/orange, ardoise/ocre,
-   grenat/ardoise). */
+/* ComparatifVPN — refonte 2026-08-08 : theme clair et impactant (le theme sombre
+   "console securite" precedent lisait comme vieux/austere, retour explicite du
+   mainteneur apres comparaison avec les sites concurrents du secteur). Repris :
+   fond clair, cartes blanches avec ombre douce, accent indigo/violet (confiance,
+   technologie) + emeraude pour les badges "Audite" (le vert = verifie indepen-
+   damment reste le repere le plus lisible), rouge/corail pour "Non audite".
+   Logo propre ajoute (img/logo.svg, bouclier + coche). Police systeme uniquement,
+   aucun CDN externe. Volontairement distinct du reste de la famille dlastes
+   (aucun autre site n'utilise l'indigo/violet comme accent principal).
+   Discipline inchangee : pas de note /10 inventee, pas de "meilleur choix"
+   sans fait source precis a cote — l'impact vient de la mise en forme
+   (badges, rangs, hierarchie typographique), jamais d'un chiffre fabrique. */
 
 :root {
-  color-scheme: dark;
-  --fond: #0a0e13;
-  --fond-carte: #121922;
-  --fond-carte-hover: #16202b;
-  --bordure: #223040;
-  --bordure-claire: #2c3e52;
-  --texte: #e7edf3;
-  --texte-attenue: #93a4b5;
-  --texte-tres-attenue: #5f7284;
-  --accent: #24e6a8;
-  --accent-fonce: #16b783;
-  --accent-texte-sur: #04120c;
-  --violet: #9d8cf6;
-  --jaune: #f5c451;
-  --rouge: #ff6d6d;
-  --rayon: 10px;
-  --rayon-lg: 16px;
+  color-scheme: light;
+  --fond: #f6f7fb;
+  --fond-degrade: linear-gradient(180deg, #eef0ff 0%, #f6f7fb 320px);
+  --fond-carte: #ffffff;
+  --fond-carte-alt: #f1f2fb;
+  --bordure: #e4e6f2;
+  --bordure-claire: #d5d8ee;
+  --texte: #171930;
+  --texte-attenue: #5b5f7d;
+  --texte-tres-attenue: #8b8fae;
+  --accent: #4f46e5;
+  --accent-fonce: #3d33c9;
+  --accent-clair: #eef0ff;
+  --accent-texte-sur: #ffffff;
+  --violet: #7c3aed;
+  --emeraude: #0f9d68;
+  --emeraude-fond: #e6f7ef;
+  --jaune: #b7791f;
+  --jaune-fond: #fdf3df;
+  --rouge: #d93650;
+  --rouge-fond: #fdeaee;
+  --rayon: 12px;
+  --rayon-lg: 20px;
+  --ombre: 0 1px 2px rgba(23, 25, 48, 0.04), 0 8px 24px -12px rgba(23, 25, 48, 0.12);
+  --ombre-hover: 0 4px 10px rgba(23, 25, 48, 0.06), 0 16px 32px -14px rgba(79, 70, 229, 0.22);
   --font-texte: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Consolas", "Roboto Mono", monospace;
 }
@@ -49,22 +60,25 @@ a:hover { text-decoration: underline; }
 .conteneur { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
 .conteneur-etroit { max-width: 760px; margin: 0 auto; padding: 0 20px; }
 
-/* Bandeau nav sections (coherent avec le reste de la famille : un repere de
-   navigation permanent, meme si ici il n'y a qu'une seule section) */
 .entete {
   border-bottom: 1px solid var(--bordure);
-  background: rgba(10, 14, 19, 0.92);
-  backdrop-filter: blur(6px);
+  background: rgba(246, 247, 251, 0.9);
+  backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
   z-index: 20;
 }
 .entete-barre { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
-.logo { display: flex; align-items: baseline; gap: 8px; font-family: var(--font-mono); font-size: 1.15rem; font-weight: 700; color: var(--texte); }
+.logo {
+  display: flex; align-items: center; gap: 9px;
+  font-family: var(--font-texte); font-size: 1.2rem; font-weight: 800;
+  letter-spacing: -0.01em; color: var(--texte);
+}
+.logo-mark { border-radius: 7px; flex-shrink: 0; }
 .logo .point { color: var(--accent); }
-.nav-principale { display: flex; gap: 24px; font-size: 0.92rem; }
-.nav-principale a { color: var(--texte-attenue); }
-.nav-principale a:hover, .nav-principale a.actif { color: var(--texte); text-decoration: none; }
+.nav-principale { display: flex; align-items: center; gap: 28px; font-size: 0.92rem; }
+.nav-principale a { color: var(--texte-attenue); font-weight: 600; }
+.nav-principale a:hover, .nav-principale a.actif { color: var(--accent); text-decoration: none; }
 
 .pied {
   border-top: 1px solid var(--bordure);
@@ -73,108 +87,125 @@ a:hover { text-decoration: underline; }
   color: var(--texte-tres-attenue);
   font-size: 0.85rem;
 }
-.pied a { color: var(--texte-attenue); }
+.pied a { color: var(--texte-attenue); font-weight: 600; }
 .pied-liens { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 10px; }
 
-/* Hero court (accueil : le tableau comparatif suit immediatement, pas de
-   grand bloc marketing avant — c'est ce que la page est censee montrer) */
-.hero-court { padding: 40px 0 28px; }
-.hero-court h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 10px; max-width: 760px; }
-.hero-court .lead-court { font-size: 1rem; color: var(--texte-attenue); max-width: 680px; margin: 0; }
+/* Hero court (accueil : le tableau comparatif suit immediatement) */
+.hero-court {
+  padding: 44px 0 32px;
+  margin: 0 0 8px;
+  background: var(--fond-degrade);
+  border-bottom: 1px solid var(--bordure);
+}
+.hero-court h1 { font-size: 2.15rem; line-height: 1.18; margin: 0 0 12px; max-width: 760px; letter-spacing: -0.02em; }
+.hero-court .lead-court { font-size: 1.03rem; color: var(--texte-attenue); max-width: 680px; margin: 0; }
 .section-tableau { margin-top: 28px; }
 .sous-titre { color: var(--texte-attenue); max-width: 680px; margin-top: -8px; }
 
 /* Hero (ancien, conserve pour compatibilite si reutilise ailleurs) */
 .hero { padding: 56px 0 40px; }
 .hero-etiquette {
-  display: inline-block; font-family: var(--font-mono); font-size: 0.75rem;
-  letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);
-  background: rgba(36, 230, 168, 0.1); border: 1px solid rgba(36, 230, 168, 0.35);
-  border-radius: 20px; padding: 4px 12px; margin-bottom: 18px;
+  display: inline-block; font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.03em; color: var(--accent-fonce);
+  background: var(--accent-clair); border: 1px solid rgba(79, 70, 229, 0.25);
+  border-radius: 20px; padding: 5px 13px; margin-bottom: 18px;
 }
 .hero h1 { font-size: 2.3rem; line-height: 1.2; margin: 0 0 16px; max-width: 720px; }
 .hero p.lead { font-size: 1.08rem; color: var(--texte-attenue); max-width: 620px; margin: 0 0 28px; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
 .bouton {
-  display: inline-block; font-family: var(--font-texte); font-weight: 600; font-size: 0.95rem;
-  padding: 12px 22px; border-radius: var(--rayon); cursor: pointer; border: 1px solid transparent;
+  display: inline-block; font-family: var(--font-texte); font-weight: 700; font-size: 0.95rem;
+  padding: 12px 24px; border-radius: var(--rayon); cursor: pointer; border: 1px solid transparent;
 }
-.bouton-primaire { background: var(--accent); color: var(--accent-texte-sur); }
+.bouton-primaire { background: var(--accent); color: var(--accent-texte-sur); box-shadow: 0 6px 16px -6px rgba(79, 70, 229, 0.55); }
 .bouton-primaire:hover { background: var(--accent-fonce); text-decoration: none; }
-.bouton-secondaire { background: transparent; color: var(--texte); border-color: var(--bordure-claire); }
+.bouton-secondaire { background: var(--fond-carte); color: var(--texte); border-color: var(--bordure-claire); }
 .bouton-secondaire:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 
 /* Grille de cartes (accueil : top picks / guides) */
 .grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin: 28px 0; }
 .carte {
   background: var(--fond-carte); border: 1px solid var(--bordure); border-radius: var(--rayon-lg);
-  padding: 22px; transition: border-color 0.15s ease, transform 0.15s ease;
+  padding: 22px; box-shadow: var(--ombre);
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
-.carte:hover { border-color: var(--bordure-claire); transform: translateY(-2px); }
-.carte h3 { margin: 0 0 8px; font-size: 1.05rem; }
+.carte:hover { border-color: var(--bordure-claire); transform: translateY(-3px); box-shadow: var(--ombre-hover); }
+.carte h3 { margin: 0 0 8px; font-size: 1.05rem; display: flex; align-items: center; }
 .carte p { color: var(--texte-attenue); font-size: 0.92rem; margin: 0 0 12px; }
 
-.rang { font-family: var(--font-mono); color: var(--accent); font-weight: 700; margin-right: 6px; }
+.rang {
+  font-family: var(--font-texte); font-weight: 800; color: #fff; margin-right: 10px;
+  background: linear-gradient(135deg, var(--accent), var(--violet));
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; border-radius: 8px; font-size: 0.8rem; flex-shrink: 0;
+}
 
 /* Section titres */
 section { margin: 48px 0; }
-h2 { font-size: 1.5rem; margin: 0 0 20px; }
+h2 { font-size: 1.55rem; margin: 0 0 20px; letter-spacing: -0.01em; }
 h2 .accent-point { color: var(--accent); }
 
 /* Tableau comparatif */
-.tableau-scroll { overflow-x: auto; border: 1px solid var(--bordure); border-radius: var(--rayon-lg); }
+.tableau-scroll { overflow-x: auto; border: 1px solid var(--bordure); border-radius: var(--rayon-lg); background: var(--fond-carte); box-shadow: var(--ombre); }
 table.comparatif { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 720px; }
 table.comparatif thead th {
-  background: var(--fond-carte); text-align: left; padding: 12px 14px; font-weight: 600;
+  background: var(--fond-carte-alt); text-align: left; padding: 14px; font-weight: 700;
   border-bottom: 1px solid var(--bordure); cursor: pointer; white-space: nowrap; user-select: none;
 }
 table.comparatif thead th:hover { color: var(--accent); }
 table.comparatif thead th .fleche { color: var(--texte-tres-attenue); font-size: 0.75rem; margin-left: 4px; }
-table.comparatif tbody td { padding: 12px 14px; border-bottom: 1px solid var(--bordure); vertical-align: top; }
-table.comparatif tbody tr:hover { background: var(--fond-carte-hover); }
+table.comparatif tbody td { padding: 14px; border-bottom: 1px solid var(--bordure); vertical-align: top; }
+table.comparatif tbody tr:hover { background: var(--accent-clair); }
 table.comparatif tbody tr:last-child td { border-bottom: none; }
-table.comparatif .nom-vpn { font-weight: 600; }
-table.comparatif .prix { font-family: var(--font-mono); color: var(--accent); }
-table.comparatif .non-renseigne { color: var(--texte-tres-attenue); font-style: italic; }
+table.comparatif tbody tr:first-child td { background: linear-gradient(90deg, var(--accent-clair), transparent 60%); }
+table.comparatif .nom-vpn { font-weight: 700; }
+table.comparatif .prix { font-weight: 800; color: var(--accent-fonce); }
+table.comparatif .non-renseigne { color: var(--texte-tres-attenue); font-style: italic; font-weight: 400; }
 table.comparatif .audit-detail { color: var(--texte-attenue); }
 
-.logo-vpn { border-radius: 6px; vertical-align: middle; margin-right: 8px; background: #fff; object-fit: contain; }
+.logo-vpn { border-radius: 8px; vertical-align: middle; margin-right: 8px; background: #fff; object-fit: contain; border: 1px solid var(--bordure); padding: 2px; }
 .lien-fournisseur { display: inline-flex; align-items: center; color: var(--texte); }
 .lien-fournisseur:hover { color: var(--accent); text-decoration: none; }
-.lien-officiel { font-size: 0.85rem; white-space: nowrap; }
+.lien-officiel {
+  display: inline-block; font-size: 0.85rem; font-weight: 700; white-space: nowrap;
+  background: var(--accent); color: #fff; padding: 7px 14px; border-radius: 20px;
+}
+.lien-officiel:hover { background: var(--accent-fonce); text-decoration: none; }
 
-.badge { display: inline-block; font-size: 0.72rem; font-family: var(--font-mono); padding: 2px 8px; border-radius: 20px; }
-.badge-audite { background: rgba(36, 230, 168, 0.12); color: var(--accent); border: 1px solid rgba(36, 230, 168, 0.3); }
-.badge-non-audite { background: rgba(255, 109, 109, 0.1); color: var(--rouge); border: 1px solid rgba(255, 109, 109, 0.3); }
+.badge { display: inline-block; font-size: 0.74rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
+.badge-audite { background: var(--emeraude-fond); color: var(--emeraude); border: 1px solid rgba(15, 157, 104, 0.25); }
+.badge-non-audite { background: var(--rouge-fond); color: var(--rouge); border: 1px solid rgba(217, 54, 80, 0.25); }
 
 /* Grille "chaque fournisseur en detail" (accueil) */
 .grille-vpn { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .carte-vpn-entete { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
-.carte-vpn-entete .logo-vpn { margin-right: 0; }
+.carte-vpn-entete .logo-vpn { margin-right: 0; width: 36px; height: 36px; }
 .carte-vpn-entete h3 { margin: 0; font-size: 1.05rem; flex: 1; min-width: 0; }
-.carte-vpn-liens { display: flex; gap: 14px; font-size: 0.88rem; margin-top: 4px; }
+.carte-vpn-liens { display: flex; gap: 14px; font-size: 0.88rem; margin-top: 4px; align-items: center; }
+.carte-vpn-liens a:first-child { color: var(--texte); font-weight: 600; }
+.carte-vpn-liens a:first-child:hover { color: var(--accent); }
 
 /* Fiche VPN individuelle */
-.fiche-entete { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.fiche-entete { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
 .fiche-titre { display: flex; align-items: center; gap: 12px; }
 .fiche-entete h1 { margin: 0; }
-.fiche-titre .logo-vpn { margin-right: 0; }
-.fiche-prix-badge { font-family: var(--font-mono); font-size: 1.3rem; color: var(--accent); }
-.fiche-prix-badge span { font-size: 0.85rem; color: var(--texte-attenue); font-family: var(--font-texte); }
+.fiche-titre .logo-vpn { margin-right: 0; width: 44px; height: 44px; }
+.fiche-prix-badge { font-weight: 800; font-size: 1.35rem; color: var(--accent-fonce); }
+.fiche-prix-badge span { font-size: 0.85rem; color: var(--texte-attenue); font-weight: 400; }
 
 .fiche-grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 28px 0; }
-.fiche-stat { background: var(--fond-carte); border: 1px solid var(--bordure); border-radius: var(--rayon); padding: 16px; }
-.fiche-stat .libelle { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--texte-tres-attenue); margin-bottom: 6px; }
-.fiche-stat .valeur { font-size: 1.05rem; font-weight: 600; }
-.fiche-stat .valeur.mono { font-family: var(--font-mono); color: var(--accent); }
+.fiche-stat { background: var(--fond-carte); border: 1px solid var(--bordure); border-radius: var(--rayon); padding: 16px; box-shadow: var(--ombre); }
+.fiche-stat .libelle { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--texte-tres-attenue); margin-bottom: 6px; font-weight: 700; }
+.fiche-stat .valeur { font-size: 1.05rem; font-weight: 700; }
+.fiche-stat .valeur.mono { color: var(--accent-fonce); }
 
 .encart {
-  background: var(--fond-carte); border-left: 3px solid var(--violet); border-radius: var(--rayon);
+  background: var(--fond-carte-alt); border-left: 4px solid var(--violet); border-radius: var(--rayon);
   padding: 16px 20px; margin: 20px 0; font-size: 0.92rem; color: var(--texte-attenue);
 }
-.encart.alerte { border-left-color: var(--rouge); }
-.encart.avertissement { border-left-color: var(--jaune); }
+.encart.alerte { border-left-color: var(--rouge); background: var(--rouge-fond); }
+.encart.avertissement { border-left-color: var(--jaune); background: var(--jaune-fond); }
 
 .liste-sources { list-style: none; padding: 0; margin: 12px 0 0; font-size: 0.85rem; }
 .liste-sources li { padding: 4px 0; }
@@ -187,14 +218,15 @@ table.comparatif .audit-detail { color: var(--texte-attenue); }
 /* FAQ */
 .faq-item { border-bottom: 1px solid var(--bordure); padding: 20px 0; }
 .faq-item:last-child { border-bottom: none; }
-.faq-item h3 { margin: 0 0 8px; font-size: 1.02rem; color: var(--texte); }
+.faq-item h3 { margin: 0 0 8px; font-size: 1.02rem; color: var(--texte); font-weight: 700; }
 .faq-item p { margin: 0; color: var(--texte-attenue); font-size: 0.92rem; }
 
 /* Fil d'Ariane */
 .fil-ariane { font-size: 0.82rem; color: var(--texte-tres-attenue); margin-bottom: 18px; }
-.fil-ariane a { color: var(--texte-attenue); }
+.fil-ariane a { color: var(--texte-attenue); font-weight: 600; }
 
 @media (max-width: 640px) {
   .hero h1 { font-size: 1.7rem; }
+  .hero-court h1 { font-size: 1.7rem; }
   .nav-principale { display: none; }
 }

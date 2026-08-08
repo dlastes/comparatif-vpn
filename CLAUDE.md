@@ -88,17 +88,38 @@ eux-memes. Points notables verifies pendant cette recherche, a ne pas re-deviner
 
 ## Identite visuelle
 
-Theme sombre "console de securite" (`site/css/style.css`) : fond quasi-noir (`--fond:
-#0a0e13`), accent emeraude/menthe `--accent: #24e6a8` (confiance/chiffrement), violet
-`--violet: #9d8cf6` en accent secondaire (vie privee), police monospace systeme pour les
-donnees techniques/chiffres (`--font-mono`), aucune police chargee depuis un CDN externe —
-coherent avec le principe deja applique a sql.js/bzip2.js/Leaflet ailleurs dans la famille
-(rien de charge depuis un CDN tiers), et delibere ironique-a-eviter pour un site qui parle de
-vie privee. **Volontairement distinct de tous les autres sites de la famille** : aucun n'a de
-theme sombre — PrixDuMetre (vert sapin/terre cuite), ValeurEcole (marine/or), PleinMalin
-(asphalte/orange), RisqueCommune web (ardoise/ocre), ConvCollectives web (grenat/ardoise).
-Meme raisonnement anti-"template duplique" pour une eventuelle regie publicitaire future que
-documente dans le CLAUDE.md de PrixDuMetre.
+**Refonte du 2026-08-08 — perime, la section qui suit remplace celle-ci.** Le theme sombre
+"console de securite" d'origine (fond quasi-noir `#0a0e13`, accent emeraude) a ete juge par le
+mainteneur "vieux et sombre" apres comparaison avec des sites concurrents du secteur, avec deux
+demandes explicites : un vrai logo (il n'y en avait pas, seulement le wordmark texte
+"comparatif.vpn") et un rendu plus impactant. Le principe "anti-template-duplique" (rester
+visuellement distinct des autres sites de la famille dlastes) reste vrai avec la nouvelle
+palette indigo/violet — aucun autre site de la famille ne l'utilise.
+
+**Theme actuel** (`site/css/style.css`) : fond clair (`--fond: #f6f7fb`), cartes blanches avec
+ombre douce, accent indigo `--accent: #4f46e5` + violet en degrade secondaire, emeraude pour
+les badges "Audite"/rouge-corail pour "Non audite" (le code couleur confiance/alerte est
+inchange, seul le fond a change de sombre a clair). Police systeme uniquement, toujours aucune
+police ni CDN externe. **Logo ajoute** : `site/img/logo.svg` (bouclier + coche, degrade
+indigo/violet, genere directement en SVG — pas d'appel a un outil de rendu externe), insere en
+`<img>` dans le header de chacune des 19 pages HTML du site (markup identique partout, remplace
+en une seule passe). `?v=3` → `?v=4` sur les liens `style.css`/`app.js` de toutes les pages pour
+casser le cache.
+
+**Important : la discipline "jamais de donnee inventee" (voir plus bas) est restee intacte.**
+L'"impact" visuel vient de la mise en forme (badges colores, rangs numerotes en pastille dans
+"Nos selections", CTA "Site officiel" en bouton plein, premiere ligne du tableau surlignee) —
+aucune note /10 ni "meilleur choix" fabriquee n'a ete ajoutee, contrairement au pattern courant
+chez les comparateurs VPN concurrents (dont un site de reference cite par le mainteneur pour
+l'inspiration visuelle, dont le contenu — notes, formulations marketing — n'a pas ete repris,
+seuls des principes de mise en page generiques l'ont ete : cartes blanches, badges pilule,
+hierarchie typographique forte).
+
+Verifie visuellement le 2026-08-08 : accueil, une fiche VPN (`avis/nordvpn.html`),
+`comparatif.html`, `guides/index.html`, largeur mobile (390px) et desktop (1400px) — Playwright
+headless (extension Chrome indisponible dans cet environnement), 0 erreur console, logo present
+sur les 19 pages (verifie par comptage), aucun residu de l'ancien theme sombre (`color-scheme:
+dark` absent du CSS).
 
 ## Verifie pour de vrai (2026-08-07)
 

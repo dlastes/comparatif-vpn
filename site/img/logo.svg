@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <path d="M16 2 L28 6.5 V14.5 C28 22 22.8 27.7 16 30 C9.2 27.7 4 22 4 14.5 V6.5 Z" fill="url(#cvpn-g)"/>
+  <path d="M10.5 16.2 L14 19.8 L21.5 11.5" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <defs>
+    <linearGradient id="cvpn-g" x1="4" y1="2" x2="28" y2="30" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#4338ca"/>
+    </linearGradient>
+  </defs>
+</svg>
